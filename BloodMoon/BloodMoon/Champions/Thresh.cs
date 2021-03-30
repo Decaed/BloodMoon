@@ -180,7 +180,7 @@ namespace BloodMoon.Champions
                 if (!target.IsValidTarget())
                     return;
 
-                var input = Q.GetPrediction(target, false);
+                var input = Q.GetPrediction(target, true);
 ;
 
                 if (target.HasBuff("threshQ"))
