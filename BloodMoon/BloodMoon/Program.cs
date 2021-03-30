@@ -1,6 +1,6 @@
 using EnsoulSharp;
 using EnsoulSharp.SDK;
-using LyrdumAIO.Champions;
+using BloodMoon.Champions;
 using System;
 using System.Net;
 
