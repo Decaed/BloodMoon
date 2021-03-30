@@ -183,7 +183,7 @@ namespace BloodMoon.Champions
                 var input = Q.GetPrediction(target, false);
 ;
 
-                if target.HasBuff("threshQ")
+                if (target.HasBuff("threshQ"))
                 return;
                 
                 if (input.Hitchance >= HitChance.High && Player.Distance(target.Position) > 500)
