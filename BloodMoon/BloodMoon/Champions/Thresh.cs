@@ -186,7 +186,7 @@ namespace BloodMoon.Champions
                 if (target.HasBuff("threshQ"))
                 return;
                         
-                if (input.Hitchance >= HitChance.High && Qprediction.CollisionObjects.Count(h => h.IsEnemy && !h.IsDead && h is Obj_AI_Minion) < 2 && Player.Distance(target.Position) > 500)
+                if (input.Hitchance >= HitChance.High && input.CollisionObjects.Count(h => h.IsEnemy && !h.IsDead) < 2 && Player.Distance(target.Position) > 500)
                 {
                     Q.Cast(input.CastPosition);
                 }
