@@ -179,6 +179,9 @@ namespace BloodMoon.Champions
 
                 if (!target.IsValidTarget())
                     return;
+        
+                Q.CastIfHitchanceEquals(target, HitChance.Dashing, true);
+                Q.CastIfHitchanceEquals(target, HitChance.Immobile, true);
 
                 var input = Q.GetPrediction(target, false);
 ;
