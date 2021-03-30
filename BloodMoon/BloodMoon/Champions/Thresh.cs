@@ -131,11 +131,6 @@ namespace BloodMoon.Champions
             var manaE = Config["mana"].GetValue<MenuSlider>("manaE").Value;
             var mana = GameObjects.Player.ManaPercent;
 
-            if (mana > manaQ && Config["harass"].GetValue<MenuBool>("useQ").Enabled)
-            {
-                logicQ2();
-            }
-
             if (mana > manaW && Config["harass"].GetValue<MenuBool>("useW").Enabled)
             {
                 logicW();
