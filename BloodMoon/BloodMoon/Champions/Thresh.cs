@@ -186,7 +186,7 @@ namespace BloodMoon.Champions
                 if (target.HasBuff("threshQ"))
                 return;
                 
-                Q.CastIfHitchanceEquals(target, HitChance.Dash, true);
+                Q.CastIfHitchanceEquals(target, HitChance.Dash, collision=true);
                         
                 if (input.Hitchance >= HitChance.High && Player.Distance(target.Position) > 500)
                 {
