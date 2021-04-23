@@ -180,13 +180,13 @@ namespace BloodMoon.Champions
                 if (!target.IsValidTarget())
                     return;
 
-                var input = Q.GetPrediction(target, true);
+                var input = Q.GetPrediction(target, true, 0, CollisionObjects.Minions | CollisionObjects.YasuoWall);
 ;
 
                 if (target.HasBuff("threshQ"))
                 return;
                         
-                if (input.Hitchance >= HitChance.High && input.CollisionObjects.Count(h => h.IsEnemy && !h.IsDead) < 2 && Player.Distance(target.Position) > 500)
+                if (input.Hitchance >= HitChance.High && input.CollisionObjects.Count == 0 && Player.Distance(target.Position) > 500)
                 {
                     Q.Cast(input.CastPosition);
                 }
