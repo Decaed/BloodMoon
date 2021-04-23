@@ -180,7 +180,7 @@ namespace BloodMoon.Champions
                 if (!target.IsValidTarget())
                     return;
 
-                var input = Q.GetPrediction(target, true, 0, CollisionObjects.Minions | CollisionObjects.YasuoWall);
+                var input = Q.GetPrediction(target, true);
 ;
 
                 if (target.HasBuff("threshQ"))
