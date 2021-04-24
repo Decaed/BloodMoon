@@ -174,7 +174,7 @@ namespace BloodMoon.Champions
         {
             if (Q.IsReady())
             {
-                var target = Q.GetTarget(Q.Range);
+                var target = TargetSelector.GetTarget(Q.Range);
                 var Player = GameObjects.Player;
 
                 if (!target.IsValidTarget())
