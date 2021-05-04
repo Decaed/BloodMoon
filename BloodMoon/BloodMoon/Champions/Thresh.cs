@@ -97,8 +97,6 @@ namespace BloodMoon.Champions
                     break;
 
                 case OrbwalkerMode.LaneClear:
-                    Jungle();
-                    LaneClear();
                     break;
 
                 case OrbwalkerMode.LastHit:
