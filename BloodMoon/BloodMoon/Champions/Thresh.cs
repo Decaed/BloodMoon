@@ -167,18 +167,15 @@ namespace BloodMoon.Champions
             {
                 var target = TargetSelector.GetTarget(Q.Range);
                 var Player = GameObjects.Player;
-                var pred = FSpred.Prediction.Prediction.GetPrediction(Q, target);
+                var pred = SebbyLibPorted.Prediction.Prediction.GetPrediction(Q, target);
 
                 if (!target.IsValidTarget())
                     return;
 
-                var input = Q.GetPrediction(target, true);
-;
-
                 if (target.HasBuff("threshQ"))
                 return;
                         
-                if (pred != null && pred.Hitchance >= FSpred.Prediction.HitChance.High)
+                if (pred != null && pred.Hitchance >= SebbyLibPorted.Prediction.HitChance.High)
                 {
                     Q.Cast(pred.CastPosition);
                 }
