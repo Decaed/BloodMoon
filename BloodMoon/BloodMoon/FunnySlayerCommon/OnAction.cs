@@ -72,29 +72,7 @@ namespace FunnySlayerCommon
         public static int LastDisableMove = 0;
         private static int LastAttack = 0;
         private static int LastSendPrintChat = 0;
-        private static void Game_OnUpdate1(EventArgs args)
        
-                {
-                    if (Orbwalker.ActiveMode <= OrbwalkerMode.LastHit)
-                        Orbwalker.Orbwalk(Orbwalker.GetTarget(), Game.CursorPos);
-                    else
-                        Orbwalker.SetOrbwalkerPosition(Vector3.Zero);
-                    Orbwalker.AttackEnabled = true;
-                }
-
-                Set();
-            }
-            else
-            {
-                Set();
-            }                       
-            if (AfterAA)
-            {
-                LastDisableMove = 0;
-                Orbwalker.MoveEnabled = true;
-            }
-        }
-
         private static void Set()
         {
             if (OnAA || Variables.GameTimeTickCount - LastAttack < CastTimeDelay)
