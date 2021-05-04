@@ -89,6 +89,16 @@
     <Compile Include="FunnySlayerCommon\FSTargetSelector.cs" />
     <Compile Include="FunnySlayerCommon\MenuClass.cs" />
     <Compile Include="FunnySlayerCommon\OnAction.cs" />
+    <Compile Include="SebbyLibPorted\Cache.cs" />
+    <Compile Include="SebbyLibPorted\Events.cs" />
+    <Compile Include="SebbyLibPorted\Geometry.cs" />
+    <Compile Include="SebbyLibPorted\HealthPrediction.cs" />
+    <Compile Include="SebbyLibPorted\MEC.cs" />
+    <Compile Include="SebbyLibPorted\MenuExtensions.cs" />
+    <Compile Include="SebbyLibPorted\Movement.cs" />
+    <Compile Include="SebbyLibPorted\OktwCommon.cs" />
+    <Compile Include="SebbyLibPorted\Orbwalking.cs" />
+    <Compile Include="SebbyLibPorted\PredictionOktw.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
