@@ -109,7 +109,7 @@ namespace BloodMoon.Champions
 
             }
 
-            logicR();
+           
             skinch();
         }
 
@@ -121,24 +121,6 @@ namespace BloodMoon.Champions
 
                 if (GameObjects.Player.SkinId != skinut)
                     GameObjects.Player.SetSkin(skinut);
-            }
-        }
-
-        private static void harass()
-        {
-            var manaQ = Config["mana"].GetValue<MenuSlider>("manaQ").Value;
-            var manaW = Config["mana"].GetValue<MenuSlider>("manaW").Value;
-            var manaE = Config["mana"].GetValue<MenuSlider>("manaE").Value;
-            var mana = GameObjects.Player.ManaPercent;
-
-            if (mana > manaW && Config["harass"].GetValue<MenuBool>("useW").Enabled)
-            {
-                logicW();
-            }
-
-            if (mana > manaE && Config["harass"].GetValue<MenuBool>("useE").Enabled)
-            {
-                logicE();
             }
         }
 
