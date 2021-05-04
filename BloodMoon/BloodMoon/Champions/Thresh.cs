@@ -205,32 +205,7 @@ namespace BloodMoon.Champions
             }
             var color4 = decision4 ? System.Drawing.Color.Red : System.Drawing.Color.Yellow;
             Drawing.DrawText(Drawing.WorldToScreen(positions - 20f), color4, text4);
-        }
-
-        private static void Jungle()
-        {
-            var normal = GameObjects.GetJungles(650);
-            if (normal.Count > 0) { 
-                
-
-                foreach (var mob in normal)
-                {
-                    if (Q.IsReady() && Config["jungleskills"].GetValue<MenuBool>("useQ").Enabled)
-                        Q.Cast(mob.Position);
-
-                    if (Config["jungleskills"].GetValue<MenuBool>("useW").Enabled && W.IsReady())
-                    {
-                        W.Cast(GameObjects.Player.Position);
-                    }
-
-                    if (E.IsReady() && Config["jungleskills"].GetValue<MenuBool>("useE").Enabled)
-                        E.Cast(mob.Position);
-                }
-
-            }
-            else
-            {
-                harass();
+        
             }
         }
     }
