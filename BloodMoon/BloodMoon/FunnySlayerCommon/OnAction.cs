@@ -76,8 +76,6 @@ namespace FunnySlayerCommon
         {
             if(ObjectManager.Player.CharacterName == "Yasuo")
             {
-                if (DominationAIO.NewPlugins.Yasuo.MyYS.CheckImDashing)
-                {
                     Orbwalker.AttackEnabled = false;
                     ObjectManager.Player.IssueOrder(GameObjectOrder.MoveTo, Game.CursorPos);
                     Orbwalker.MoveEnabled = true;
