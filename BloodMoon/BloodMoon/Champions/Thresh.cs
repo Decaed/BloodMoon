@@ -24,16 +24,12 @@ namespace BloodMoon.Champions
             {
                 return;
             }
-            Q = new Spell(SpellSlot.Q, 1050) { AddHitBox = true };
-            Q2 = new Spell(SpellSlot.Q, 1000f) { AddHitBox = true };
-            W = new Spell(SpellSlot.W, 950f);
-            E = new Spell(SpellSlot.E, 500) {AddHitBox = true };
-            R = new Spell(SpellSlot.R, 350f);
+            Q = new Spell(SpellSlot.Q, 1050f);
+            E = new Spell(SpellSlot.E, 500);
 
-            Q.SetSkillshot(0.5f, 70f, 1050, true, SpellType.Line);
-            W.SetSkillshot(0.75f, 10f, float.MaxValue, false, SpellType.Circle);
+            Q.SetSkillshot(0.5f, 70f, 1900f, true, SpellType.Line);
             E.SetSkillshot(0.75f, 10f, float.MaxValue, false, SpellType.Line);
-            Q2.SetSkillshot(0.25f * 4, 140f, float.MaxValue, true, SpellType.Line);
+            
 
             Config = new Menu("Thresh", "BloodMoon", true);
 
@@ -198,55 +194,6 @@ namespace BloodMoon.Champions
             }
         }
 
-        private static void logicW()
-        {
-            if (W.IsReady())
-            {
-                var target = W.GetTarget();
-                var ally = GameObjects.AllyHeroes.Where(x => x.IsValidTarget(W.Range, checkTeam: false) && !x.IsMe).OrderBy(x => x.Health).FirstOrDefault();
-
-                if (ally != null)
-                {
-
-                    if (!target.CanMove || target.HasBuffOfType(BuffType.Stun))
-                    {
-                        W.Cast(ally.Position);
-                    }
-
-                    var enemys = ally.Position.CountEnemyHeroesInRange(ally.AttackRange);
-
-                    if (enemys == 1 && ally.Health <= target.Health)
-                    {
-                        W.Cast(ally.Position);
-                    }
-
-                    if (enemys > 1 && ally.HealthPercent <= 30)
-                    {
-                        W.Cast(ally.Position);
-                    }
-
-                    if (ally.HasBuffOfType(BuffType.Stun)
-                        || ally.HasBuffOfType(BuffType.Slow)
-                        || ally.HasBuffOfType(BuffType.Silence)
-                        || ally.HasBuffOfType(BuffType.Sleep)
-                        || ally.HasBuffOfType(BuffType.Asleep)
-                        || ally.HasBuffOfType(BuffType.Blind)
-                        || ally.HasBuffOfType(BuffType.Charm)
-                        || ally.HasBuffOfType(BuffType.Disarm)
-                        || ally.HasBuffOfType(BuffType.Knockup)
-                        || ally.HasBuffOfType(BuffType.Poison)
-                        || ally.HasBuffOfType(BuffType.Polymorph)
-                        || ally.HasBuffOfType(BuffType.Taunt)
-                        || ally.HasBuffOfType(BuffType.Suppression)
-                        || ally.HasBuffOfType(BuffType.Fear)
-                        || !ally.CanMove)
-                    {
-                        W.Cast(ally.Position);
-                    }
-                }
-            }
-        }
-
         private static void logicE()
   {
       var target = E.GetTarget(E.Range);
@@ -256,32 +203,7 @@ namespace BloodMoon.Champions
       {
         E.Cast(target.Position.Extend(Player.Position, Vector3.Distance(target.Position, Player.Position) + 500));
       }
-    }
-
-        private static void logicR()
-        {
-            if (R.IsReady())
-            {
-                var target = R.GetTarget();
-
-                if (!target.IsValidTarget())
-                    return;
-
-                if (target.HasBuffOfType(BuffType.SpellImmunity))
-                    return;
-
-                if (GameObjects.Player.CountEnemyHeroesInRange(R.Range) > 1)
-                {
-                    R.Cast();
-                }
-
-                if (target.HealthPercent <= 10)
-                    R.Cast();
-
-                return;
-            }
-        }
-
+    }     
         private static void LaneClear()
         {
             if (E.IsReady() && Config["laneclear"].GetValue<MenuBool>("useE").Enabled)
