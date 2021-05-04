@@ -99,9 +99,7 @@ namespace BloodMoon.Champions
                 case OrbwalkerMode.LaneClear:
                     break;
 
-                case OrbwalkerMode.LastHit:
-                    Jungle();
-                    
+                case OrbwalkerMode.LastHit:                   
                     break;
 
             }
@@ -145,9 +143,6 @@ namespace BloodMoon.Champions
             {
                 Render.Circle.DrawCircle(position, R.Range, System.Drawing.Color.White);
             }
-
-            CanSpellFarm();
-        }
 
         private static void logicQ()
         {
