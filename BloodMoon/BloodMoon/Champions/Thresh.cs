@@ -183,5 +183,5 @@ namespace BloodMoon.Champions
         E.Cast(target.Position.Extend(Player.Position, Vector3.Distance(target.Position, Player.Position) + 500));
       }
     }     
-      
+  }  
 
