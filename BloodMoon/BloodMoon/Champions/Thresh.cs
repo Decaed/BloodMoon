@@ -94,7 +94,6 @@ namespace BloodMoon.Champions
                     break;
 
                 case OrbwalkerMode.Harass:
-                    harass();
                     break;
 
                 case OrbwalkerMode.LaneClear:
@@ -186,29 +185,6 @@ namespace BloodMoon.Champions
         E.Cast(target.Position.Extend(Player.Position, Vector3.Distance(target.Position, Player.Position) + 500));
       }
     }     
-        private static void LaneClear()
-        {
-            if (E.IsReady() && Config["laneclear"].GetValue<MenuBool>("useE").Enabled)
-            {
-                var allMinions = GameObjects.EnemyMinions.Where(x => x.IsValidTarget(E.Range)).ToList();
-
-                if (allMinions.Count == 0)
-                    return;
-
-                var farm = E.GetLineFarmLocation(allMinions, 160f);
-
-                if (allMinions.Count > 2)
-                {
-                    E.Cast(farm.Position.ToVector3(), GameObjects.Player.Position);
-                }
-            }
-            else
-            {
-                harass();
-            }
-        }
-
-
         private static void CanSpellFarm()
         {
             var positions = GameObjects.Player.Position;
