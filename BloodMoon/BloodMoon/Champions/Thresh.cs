@@ -166,6 +166,7 @@ namespace BloodMoon.Champions
             {
                 var target = TargetSelector.GetTarget(Q.Range);
                 var Player = GameObjects.Player;
+                var pred = FSpred.Prediction.Prediction.GetPrediction(Q, target);
 
                 if (!target.IsValidTarget())
                     return;
@@ -176,9 +177,9 @@ namespace BloodMoon.Champions
                 if (target.HasBuff("threshQ"))
                 return;
                         
-                if (input.Hitchance >= HitChance.High && input.CollisionObjects.Count() < 2 && Player.Distance(target.Position) > 500)
+                if (pred != null && pred.Hitchance >= FSpred.Prediction.HitChance.High)
                 {
-                    Q.Cast(input.CastPosition);
+                    Q.Cast(pred.CastPosition);
                 }
 
             }
