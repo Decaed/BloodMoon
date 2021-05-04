@@ -183,30 +183,5 @@ namespace BloodMoon.Champions
         E.Cast(target.Position.Extend(Player.Position, Vector3.Distance(target.Position, Player.Position) + 500));
       }
     }     
-        private static void CanSpellFarm()
-        {
-            var positions = GameObjects.Player.Position;
+      
 
-            //sPELLfARM
-            bool decision4;
-            var text4 = "NotBinded";
-
-            var attempt4 = Config["semiR"].GetValue<MenuKeyBind>("farm").Key;
-
-            if (Config["semiR"].GetValue<MenuKeyBind>("farm").Active)
-            {
-                decision4 = true;
-                text4 = "Spell Farm Key = " + attempt4 + " [ON]";
-            }
-            else
-            {
-                decision4 = false;
-                text4 = "Spell Farm Key = " + attempt4 + " [OFF]";
-            }
-            var color4 = decision4 ? System.Drawing.Color.Red : System.Drawing.Color.Yellow;
-            Drawing.DrawText(Drawing.WorldToScreen(positions - 20f), color4, text4);
-        
-            }
-        }
-    }
-}
