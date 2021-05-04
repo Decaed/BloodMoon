@@ -143,6 +143,7 @@ namespace BloodMoon.Champions
             {
                 Render.Circle.DrawCircle(position, R.Range, System.Drawing.Color.White);
             }
+        }
 
         private static void logicQ()
         {
