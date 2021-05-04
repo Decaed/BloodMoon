@@ -14,6 +14,8 @@ namespace BloodMoon.Champions
     {
         private static Spell Q, W, E, R, Q2;
         private static Menu Config;
+        private static FSpred.Prediction.PredictionInput QPred;
+        private static FSpred.Prediction.PredictionInput WPred;
 
         public static void OnGameLoad()
         {
