@@ -117,6 +117,24 @@
     <Compile Include="SPrediction\StasisPrediction.cs" />
     <Compile Include="SPrediction\Utility.cs" />
     <Compile Include="SPrediction\VectorPrediction.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\AIHeroClientExtensions.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\ArcPrediction.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\CirclePrediction.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\ClipperWrapper.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\Collision.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\ConePrediction.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\ConfigMenu.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\Drawings.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\Geometry.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\LinePrediction.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\MinionManager.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\PathTracker.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\Prediction.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\RingPrediction.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\SpellExtensions.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\StasisPrediction.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\Utility.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\VectorPrediction.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
