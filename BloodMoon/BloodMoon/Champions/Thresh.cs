@@ -26,7 +26,7 @@ namespace BloodMoon.Champions
             E = new Spell(SpellSlot.E, 500) {AddHitBox = true };
             R = new Spell(SpellSlot.R, 350f);
 
-            Q.SetSkillshot(0.25f * 4, 10f, float.MaxValue, true, SpellType.Line);
+            Q.SetSkillshot(0.5f, 70f, float.MaxValue, true, SpellType.Line);
             W.SetSkillshot(0.75f, 10f, float.MaxValue, false, SpellType.Circle);
             E.SetSkillshot(0.75f, 10f, float.MaxValue, false, SpellType.Line);
             Q2.SetSkillshot(0.25f * 4, 140f, float.MaxValue, true, SpellType.Line);
