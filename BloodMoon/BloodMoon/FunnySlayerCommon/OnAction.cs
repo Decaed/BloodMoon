@@ -74,10 +74,9 @@ namespace FunnySlayerCommon
         private static int LastSendPrintChat = 0;
         private static void Game_OnUpdate1(EventArgs args)
         {
-            if(ObjectManager.Player.CharacterName == "Yasuo")
+            if(ObjectManager.Player.CharacterName == "Thresh")
             {
-                if (DominationAIO.NewPlugins.Yasuo.MyYS.CheckImDashing)
-                {
+                
                     Orbwalker.AttackEnabled = false;
                     ObjectManager.Player.IssueOrder(GameObjectOrder.MoveTo, Game.CursorPos);
                     Orbwalker.MoveEnabled = true;
