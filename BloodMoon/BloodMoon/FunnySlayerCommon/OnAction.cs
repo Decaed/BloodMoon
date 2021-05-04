@@ -73,22 +73,7 @@ namespace FunnySlayerCommon
         private static int LastAttack = 0;
         private static int LastSendPrintChat = 0;
         private static void Game_OnUpdate1(EventArgs args)
-        {
-            if(ObjectManager.Player.CharacterName == "Yasuo")
-            {
-                if (DominationAIO.NewPlugins.Yasuo.MyYS.CheckImDashing)
-                {
-                    Orbwalker.AttackEnabled = false;
-                    ObjectManager.Player.IssueOrder(GameObjectOrder.MoveTo, Game.CursorPos);
-                    Orbwalker.MoveEnabled = true;
-
-
-                    if (Orbwalker.ActiveMode <= OrbwalkerMode.LastHit)
-                        Orbwalker.Orbwalk(null, Game.CursorPos);
-                    else
-                        Orbwalker.SetOrbwalkerPosition(Vector3.Zero);
-                }
-                else
+       
                 {
                     if (Orbwalker.ActiveMode <= OrbwalkerMode.LastHit)
                         Orbwalker.Orbwalk(Orbwalker.GetTarget(), Game.CursorPos);
