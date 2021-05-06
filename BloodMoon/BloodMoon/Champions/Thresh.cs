@@ -1,10 +1,11 @@
-using EnsoulSharp;
-using EnsoulSharp.SDK;
-using EnsoulSharp.SDK.MenuUI;
-using SharpDX;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using EnsoulSharp;
+using EnsoulSharp.SDK;
+using EnsoulSharp.SDK.MenuUI;
 
 using FSpred.Prediction;
 
@@ -141,7 +142,7 @@ namespace BloodMoon.Champions
             {
                 var target = TargetSelector.GetTarget(Q.Range, DamageType.Magical);
                 var Player = GameObjects.Player;
-                var pred = FSpred.Prediction.Prediction.GetPrediction(QPred, target);
+                var pred = FSpred.Prediction.Prediction.GetPrediction(Q, target);
 
                 if (!target.IsValidTarget())
                     return;
