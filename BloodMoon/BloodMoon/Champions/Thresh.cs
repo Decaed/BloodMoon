@@ -6,6 +6,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using FunnySlayerCommon;
+using SPredictionMash;
+
+SPredictionMash.ConfigMenu.Initialize(HelperMenu, "Get Prediction");
 
 namespace BloodMoon.Champions
 {
