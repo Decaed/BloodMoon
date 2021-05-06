@@ -5,6 +5,7 @@ using SharpDX;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using FunnySlayerCommon;
 
 namespace BloodMoon.Champions
 {
@@ -124,7 +125,7 @@ namespace BloodMoon.Champions
             {
                 var target = TargetSelector.GetTarget(Q.Range, DamageType.Magical);
                 var Player = GameObjects.Player;
-                var input = Q.GetPrediction(target, true);
+                var pred = FSpred.Prediction.Prediction.GetPrediction(Q, target);
 
                 if (!target.IsValidTarget())
                     return;
@@ -132,9 +133,9 @@ namespace BloodMoon.Champions
                 if (target.HasBuff("threshQ"))
                 return;
                         
-                if (input.Hitchance >= HitChance.High)
+                if (pred.CastPosition.DistanceToPlayer() <= 1050 && pred.Hitchance >= FSpred.Prediction.HitChance.High)
                 {
-                    Q.Cast(input.CastPosition);
+                    Q.Cast(pred.CastPosition);
                 }
 
             }
