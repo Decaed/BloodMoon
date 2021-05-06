@@ -151,7 +151,7 @@ namespace BloodMoon.Champions
                 if (target.HasBuff("threshQ"))
                 return;
                         
-                if(target.DistanceToPlayer() > 500 && Pred.Hitchance >= SebbyLibPorted.Prediction.HitChance.High)
+                if(Pred.Hitchance >= SebbyLibPorted.Prediction.HitChance.High)
                 {
                     Q.SPredictionCast(target, EnsoulSharp.SDK.HitChance.High);
                 }
