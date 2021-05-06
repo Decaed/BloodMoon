@@ -163,7 +163,7 @@ namespace BloodMoon.Champions
             {
                 var target = TargetSelector.GetTarget(Q.Range, DamageType.Magical);
                 var Player = GameObjects.Player;
-                var pred = SebbyLibPorted.Prediction.Prediction.GetPrediction(Q, target);
+                var pred = SebbyLibPorted.Prediction.Prediction.GetPrediction(QPred, target);
 
                 if (!target.IsValidTarget())
                     return;
