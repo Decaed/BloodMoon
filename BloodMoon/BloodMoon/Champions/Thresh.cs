@@ -72,7 +72,7 @@ namespace BloodMoon.Champions
             Config.Attach();
 
             GameEvent.OnGameTick += OnGameUpdate;
-         
+         dashingQ();
             Drawing.OnDraw += OnDraw;
         }
 
@@ -160,6 +160,27 @@ namespace BloodMoon.Champions
             }
         }
         
+           private static void dashingQ()
+        {
+            if (Q.IsReady())
+            {
+                var target = TargetSelector.GetTarget(Q.Range);
+                var Player = GameObjects.Player;
+                var input = Q.GetDashingPrediction(target, true);
+
+                if (!target.IsValidTarget())
+                    return;
+
+                if (target.HasBuff("threshQ"))
+                return;
+                        
+                if (input.Hitchance >= HitChance.Dashing)
+                {
+                    Q.Cast(input.CastPosition);
+                }
+
+            }
+        }
 
         
         private static void logicE()
