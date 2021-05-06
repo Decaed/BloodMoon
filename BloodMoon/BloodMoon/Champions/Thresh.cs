@@ -143,7 +143,7 @@ namespace BloodMoon.Champions
             {
                 var target = TargetSelector.GetTarget(Q.Range);
                 var Player = GameObjects.Player;
-                var Pred = SebbyLibPorted.Prediction.Prediction.GetPrediction(Q, Target);
+                var Pred = SebbyLibPorted.Prediction.Prediction.GetPrediction(Q, target);
 
                 if (!target.IsValidTarget())
                     return;
@@ -151,9 +151,9 @@ namespace BloodMoon.Champions
                 if (target.HasBuff("threshQ"))
                 return;
                         
-                if(Target.DistanceToPlayer() > 500 && Pred.Hitchance >= SebbyLibPorted.Prediction.HitChance.High)
+                if(target.DistanceToPlayer() > 500 && Pred.Hitchance >= SebbyLibPorted.Prediction.HitChance.High)
                 {
-                    Q.SPredictionCast(Target, EnsoulSharp.SDK.HitChance.High);
+                    Q.SPredictionCast(target, EnsoulSharp.SDK.HitChance.High);
                 }
 
             }
