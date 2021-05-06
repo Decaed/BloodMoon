@@ -168,7 +168,7 @@ namespace BloodMoon.Champions
             {
                 var target = TargetSelector.GetTarget(Q.Range, DamageType.Magical);
                 var Player = GameObjects.Player;
-                var pred = SebbyLibPorted.Prediction.Prediction.GetPrediction(Q, target);
+                var input = Q.GetPrediction(target, true);
 
                 if (!target.IsValidTarget())
                     return;
@@ -176,9 +176,9 @@ namespace BloodMoon.Champions
                 if (target.HasBuff("threshQ"))
                 return;
                         
-                if (pred != null && pred.Hitchance >= SebbyLibPorted.Prediction.HitChance.High)
+                if (input.Hitchance >= HitChance.High)
                 {
-                    Q.Cast(pred.CastPosition);
+                    Q.Cast(input.CastPosition);
                 }
 
             }
