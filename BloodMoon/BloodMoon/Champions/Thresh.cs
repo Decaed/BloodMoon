@@ -5,8 +5,6 @@ using SharpDX;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using FSpred.Prediction;
-using SPredictionMash;
 
 namespace BloodMoon.Champions
 {
@@ -30,23 +28,8 @@ namespace BloodMoon.Champions
 
             Q.SetSkillshot(0.5f, 70f, 1900f, true, SpellType.Line);
             E.SetSkillshot(0.75f, 10f, float.MaxValue, false, SpellType.Line);
-            
-            QPred = new FSpred.Prediction.PredictionInput
-            {
-                Aoe = false,
-                CollisionYasuoWall = true,
-                Collision = true,
-                CollisionObjects = new FSpred.Prediction.CollisionableObjects[] { FSpred.Prediction.CollisionableObjects.Minions, FSpred.Prediction.CollisionableObjects.YasuoWall },
-                Delay = 0.5f,
-                Radius = 70f,
-                Range = 1050f,
-                Speed = 1900f,
-                Type = FSpred.Prediction.SkillshotType.SkillshotLine,
-                From = ME.Position,
-                RangeCheckFrom = ME.Position
-            };
-            
-
+       
+           
             Config = new Menu("Thresh", "BloodMoon", true);
 
             var menuD = new Menu("dsettings", "DRAWNINGS");
