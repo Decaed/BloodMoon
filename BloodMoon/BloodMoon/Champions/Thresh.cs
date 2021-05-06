@@ -141,7 +141,7 @@ namespace BloodMoon.Champions
         {
             if (Q.IsReady())
             {
-                var target = TargetSelector.GetTarget(Q.Range);
+                var target = Q.GetTarget(Q.Range);
                 var Player = GameObjects.Player;
                 var input = Q.GetPrediction(target, true);
 
@@ -161,7 +161,7 @@ namespace BloodMoon.Champions
         
         private static void logicE()
   {
-      var target = E.GetTarget(E.Range);
+      var target = E.GetTarget.Closest(E.Range);
       var Player = GameObjects.Player;
 
       if (E.IsReady() && Player.Distance(target.Position) < E.Range)
