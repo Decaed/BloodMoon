@@ -20,11 +20,8 @@ namespace BloodMoon {
                        case "Thresh":
                         Thresh.OnGameLoad();
                         Game.Print("<font color='#ff0000' size='25'> [BloodMoon]:  </font>" + ObjectManager.Player.CharacterName + " Loaded");
-                        Game.Print("<font color='#ff0000' size='25'> [BloodMoon]:  </font>" + "<font color='#F7FF00' size='25'>Discord: discord.gg/KfQFVhdqtz </font>");
-                        Game.Print("<font color='#ff0000' size='25'> [BloodMoon]:  </font>" + "<font color='#F7FF00' size='25'>Don't forget to  personalize your settings </font>");
-                        Game.Print("<font color='#ff0000' size='25'> [BloodMoon]:  </font>" + "<font color='#F7FF00' size='25'>Bind your semi keys from menu!! </font>");
-                        Game.Print("<font color='#ff0000' size='25'> [BloodMoon]:  </font>" + "<font color='#F7FF00' size='25'>Bind your semi keys from menu!! </font>");
-                        Game.Print("<font color='#ff0000' size='25'> [BloodMoon]:  </font>" + "<font color='#F7FF00' size='25'>Bind your semi keys from menu!! </font>");
+                        Game.Print("<font color='#ff0000' size='25'> [BloodMoon]:  </font>" + "<font color='#F7FF00' size='25'></font>");
+                        Game.Print("<font color='#ff0000' size='25'> [BloodMoon]:  </font>" + "<font color='#F7FF00' size='25'></font>");
                         break;
 
                     default:
