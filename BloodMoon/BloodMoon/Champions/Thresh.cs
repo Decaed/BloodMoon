@@ -166,7 +166,7 @@ namespace BloodMoon.Champions
             {
                 var target = TargetSelector.GetTarget(Q.Range);
                 var Player = GameObjects.Player;
-                var input = Q.GetDashingPrediction(target, true);
+                var input = Q.GetPrediction(target, true);
 
                 if (!target.IsValidTarget())
                     return;
@@ -174,7 +174,7 @@ namespace BloodMoon.Champions
                 if (target.HasBuff("threshQ"))
                 return;
                         
-                if (input.Hitchance >= HitChance.Dashing)
+                if (input.Hitchance == HitChance.Dashing)
                 {
                     Q.Cast(input.CastPosition);
                 }
