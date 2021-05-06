@@ -156,28 +156,6 @@ namespace BloodMoon.Champions
 
             }
         }
-
-        private static void dashQ()
-        {
-            if (Q.IsReady())
-            {
-                var target = TargetSelector.GetTarget(Q.Range, DamageType.Magical);
-                var Player = GameObjects.Player;
-                var pred = SebbyLibPorted.Prediction.Prediction.GetPrediction(QPred, target);
-
-                if (!target.IsValidTarget())
-                    return;
-
-                if (target.HasBuff("threshQ"))
-                return;
-                        
-                if (pred != null && pred.Hitchance >= SebbyLibPorted.Prediction.HitChance.Dashing)
-                {
-                    Q.Cast(pred.CastPosition);
-                }
-
-            }
-        }
         
         private static void logicE()
   {
