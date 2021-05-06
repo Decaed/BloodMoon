@@ -36,7 +36,7 @@ namespace BloodMoon.Champions
                 Aoe = false,
                 CollisionYasuoWall = true,
                 Collision = true,
-                CollisionObjects = new FSpred.Prediction.CollisionableObjects[] { FSpred.Prediction.CollisionableObjects.Minions, FSpred.Prediction.CollisionableObjects.YasuoWall },
+                CollisionObjects = new FSpred.Prediction.CollisionableObjects[] { FSpred.Prediction.CollisionableObjects.Minions },
                 Delay = 0.50f,
                 Radius = 70f,
                 Range = 1050f,
