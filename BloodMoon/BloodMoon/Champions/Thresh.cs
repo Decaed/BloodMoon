@@ -28,7 +28,7 @@ namespace BloodMoon.Champions
             Q = new Spell(SpellSlot.Q, 1050f);
             E = new Spell(SpellSlot.E, 500);
 
-            Q.SetSkillshot(0.5f, 70f, 1900f, true, SpellType.Line);
+            Q.SetSkillshot(0.5f, 70, 1900, true, SpellType.Line);
             E.SetSkillshot(0.75f, 10f, float.MaxValue, false, SpellType.Line);
             
             QPred = new FSpred.Prediction.PredictionInput
@@ -72,7 +72,6 @@ namespace BloodMoon.Champions
             Config.Attach();
 
             GameEvent.OnGameTick += OnGameUpdate;
-         dashingQ();
             Drawing.OnDraw += OnDraw;
         }
 
@@ -144,7 +143,7 @@ namespace BloodMoon.Champions
             {
                 var target = TargetSelector.GetTarget(Q.Range);
                 var Player = GameObjects.Player;
-                var input = Q.GetPrediction(target, true);
+                var Pred = SebbyLibPorted.Prediction.Prediction.GetPrediction(Q, Target);
 
                 if (!target.IsValidTarget())
                     return;
@@ -152,36 +151,13 @@ namespace BloodMoon.Champions
                 if (target.HasBuff("threshQ"))
                 return;
                         
-                if (input.Hitchance >= HitChance.High)
+                if(Target.DistanceToPlayer() > 500 && Pred.Hitchance >= SebbyLibPorted.Prediction.HitChance.High)
                 {
-                    Q.Cast(input.CastPosition);
+                    Q.SPredictionCast(Target, EnsoulSharp.SDK.HitChance.High);
                 }
 
             }
         }
-        
-           private static void dashingQ()
-        {
-            if (Q.IsReady())
-            {
-                var target = TargetSelector.GetTarget(Q.Range);
-                var Player = GameObjects.Player;
-                var input = Q.GetPrediction(target, true);
-
-                if (!target.IsValidTarget())
-                    return;
-
-                if (target.HasBuff("threshQ"))
-                return;
-                        
-                if (input.Hitchance == HitChance.Dashing)
-                {
-                    Q.Cast(input.CastPosition);
-                }
-
-            }
-        }
-
         
         private static void logicE()
   {
