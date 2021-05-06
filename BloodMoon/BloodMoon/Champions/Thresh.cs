@@ -7,8 +7,6 @@ using System.Collections.Generic;
 using System.Linq;
 using FunnySlayerCommon;
 
-using FSPrediction.Prediction;
-
 namespace BloodMoon.Champions
 {
 
