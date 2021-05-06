@@ -50,7 +50,7 @@ namespace BloodMoon.Champions
             Config = new Menu("Thresh", "BloodMoon", true);
             
             var PredMenu = new Menu("Prediction", "Prediction");
-            SPredictionMash.ConfigMenu.Initialize(HelperMenu, "Get Prediction");
+            SPredictionMash.ConfigMenu.Initialize(PredMenu, "Get Prediction");
 
             var menuD = new Menu("dsettings", "Drawings");
             menuD.Add(new MenuBool("drawQ", "Q Range  (Red)", true));
