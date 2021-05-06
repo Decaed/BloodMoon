@@ -32,46 +32,20 @@ namespace BloodMoon.Champions
            
             Config = new Menu("Thresh", "BloodMoon", true);
 
-            var menuD = new Menu("dsettings", "DRAWNINGS");
-            menuD.Add(new MenuBool("drawQ", "Q Range  (RED)", true));
-            menuD.Add(new MenuBool("drawE", "E Range  (BLUE)", true));
-            menuD.Add(new MenuBool("drawW", "W Range (GREEN)", true));
-            menuD.Add(new MenuBool("drawR", "R Range  (WHITE)", false));
+            var menuD = new Menu("dsettings", "Drawings");
+            menuD.Add(new MenuBool("drawQ", "Q Range  (Red)", true));
+            menuD.Add(new MenuBool("drawE", "E Range  (Blue)", true));
+            menuD.Add(new MenuBool("drawW", "W Range (Green)", true));
+            menuD.Add(new MenuBool("drawR", "R Range  (White)", false));
 
-            var MenuC = new Menu("infor", "INFORMATION", false);
-            MenuC.Add(new Menu("infotool", " Harass||LastHit =  C, " + "\n LaneClear||JungleFarm = V, " + "\n Combo = SPACEBAR" + " \n Last Hit = X \n" + " Disable Drawings = L " + " \n Fore more FPS Disable EzEvade and LyrdumAIO Drawings + [Awarness] Waypoint and check Jungle->track only jungle \n If you have a bug or suggestion post it on discord server discord.gg/KfQFVhdqtz"));
-
-            var menuM = new Menu("mana", "MANA HARASS");
-            menuM.Add(new MenuSlider("manaW", "W mana %", 60, 0, 100));
-            menuM.Add(new MenuSlider("manaE", "E mana %", 60, 0, 100));
-            menuM.Add(new MenuSlider("manaQ", "Q mana %", 60, 0, 100));
-
-            var MenuS = new Menu("harass", "HARASS SKILLS", false);
-            MenuS.Add(new MenuBool("useQ", "Use Q ", true));
-            MenuS.Add(new MenuBool("useE", "Use E ", true));
-            MenuS.Add(new MenuBool("useW", "Use W ", false));
-
-            var Menuclear = new Menu("laneclear", "LANE CLEAR SKILLS", false);
-            Menuclear.Add(new MenuBool("useE", "Use E ", true));
-
-            var MenuJungle = new Menu("jungleskills", "JUNGLE SKILLS", false);
-            MenuJungle.Add(new MenuBool("useQ", "Use Q ", true));
-            MenuJungle.Add(new MenuBool("useE", "Use E ", true));
-            MenuJungle.Add(new MenuBool("useW", "Use W ", false));
-
-
-            var menuK = new Menu("skinslide", "SKIN CHANGER");
+            var menuK = new Menu("skinslide", "Skin Changer");
             menuK.Add(new MenuSliderButton("skin", "SkinID", 0, 0, 20, false));
 
-            var menuRR = new Menu("semiR", "SEMI SKILLS");
+            var menuRR = new Menu("semiR", "Semi Skills");
             menuRR.Add(new MenuKeyBind("farm", "Lane Clear spells", Keys.Select, KeyBindType.Toggle));
 
-            Config.Add(MenuC);
+        
             Config.Add(menuD);
-            Config.Add(MenuS);
-            Config.Add(Menuclear);
-            Config.Add(MenuJungle);
-            Config.Add(menuM);
             Config.Add(menuK);
             Config.Add(menuRR);
             
@@ -79,7 +53,6 @@ namespace BloodMoon.Champions
             Config.Attach();
 
             GameEvent.OnGameTick += OnGameUpdate;
-            dashQ();
             Drawing.OnDraw += OnDraw;
         }
 
