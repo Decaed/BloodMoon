@@ -162,9 +162,8 @@ namespace BloodMoon.Champions
         private static void logicE()
   {
       var target = E.GetTarget(E.Range);
-      var Player = GameObjects.Player;
 
-      if (E.IsReady() && Player.Distance(target.Position) < E.Range)
+      if (E.IsReady() && target.DistanceToPlayer() < E.Range)
       {
         E.Cast(target.Position.Extend(Player.Position, Vector3.Distance(target.Position, Player.Position) + 500));
       }
