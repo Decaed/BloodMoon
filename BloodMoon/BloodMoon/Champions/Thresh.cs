@@ -141,8 +141,7 @@ namespace BloodMoon.Champions
         {
             if (Q.IsReady())
             {
-                var target = Q.GetTarget(); ;
-                var Player = GameObjects.Player;
+                var target = Q.GetTarget();
                 var input = Q.GetPrediction(target, true);
 
                 if (!target.IsValidTarget())
@@ -153,7 +152,7 @@ namespace BloodMoon.Champions
                         
                 if (input.Hitchance >= HitChance.High && target.DistanceToPlayer() > 500)
                 {
-                    Q.Cast(target);
+                    Q.Cast(input.CastPosition);
                 }
 
             }
