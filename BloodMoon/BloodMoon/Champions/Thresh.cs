@@ -141,7 +141,7 @@ namespace BloodMoon.Champions
         {
             if (Q.IsReady())
             {
-                var target = FunnySlayerCommon.FSTargetSelector.GetFSTarget(Q.Range);
+                var target = Q.GetTarget(Q.Range);
                 var Player = GameObjects.Player;
                 var input = Q.GetPrediction(target, true);
 
@@ -151,7 +151,7 @@ namespace BloodMoon.Champions
                 if (target.HasBuff("threshQ"))
                 return;
                         
-                if (target.DistanceToPlayer() > 500)
+                if (input.Hitchance >= HitChance.High && target.DistanceToPlayer() > 500)
                 {
                     Q.Cast(target);
                 }
