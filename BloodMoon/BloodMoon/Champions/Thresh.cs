@@ -141,7 +141,7 @@ namespace BloodMoon.Champions
         {
             if (Q.IsReady())
             {
-                var target = FSTargetSelector(Q.Range);
+                var target = GameObjects.EnemyHeroes.Where(i => i.IsValidTarget()
                 var Player = GameObjects.Player;
                 var input = Q.GetPrediction(target, true);
 
