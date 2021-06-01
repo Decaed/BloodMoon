@@ -28,10 +28,7 @@ namespace BloodMoon.Champions
             E.SetSkillshot(0.125f, 110, 2000, false, SpellType.Line);
                     
             Config = new Menu("Thresh", "BloodMoon", true);
-            
-            var PredMenu = new Menu("Prediction", "Prediction");
-            SPredictionMash.ConfigMenu.Initialize(PredMenu, "Get Prediction");
-
+        
             var menuD = new Menu("dsettings", "Drawings");
             menuD.Add(new MenuBool("drawQ", "Q Range  (Red)", true));
             menuD.Add(new MenuBool("drawE", "E Range  (Blue)", true));
