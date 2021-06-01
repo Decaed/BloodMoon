@@ -27,24 +27,8 @@ namespace BloodMoon.Champions
             E = new Spell(SpellSlot.E, 500);
 
             Q.SetSkillshot(0.5f, 70, 1900, true, SpellType.Line);
-            E.SetSkillshot(0.75f, 10f, float.MaxValue, false, SpellType.Line);
-            
-            QPred = new FSpred.Prediction.PredictionInput
-            {
-                Aoe = false,
-                CollisionYasuoWall = true,
-                Collision = true,
-                CollisionObjects = new FSpred.Prediction.CollisionableObjects[] { FSpred.Prediction.CollisionableObjects.Minions },
-                Delay = 0.50f,
-                Radius = 70f,
-                Range = 1050f,
-                Speed = 1900f,
-                Type = FSpred.Prediction.SkillshotType.SkillshotLine,
-                From = ME.Position,
-                RangeCheckFrom = ME.Position
-            };
-       
-           
+            E.SetSkillshot(0.125f, 110, 2000, false, SpellType.Line);
+                    
             Config = new Menu("Thresh", "BloodMoon", true);
             
             var PredMenu = new Menu("Prediction", "Prediction");
