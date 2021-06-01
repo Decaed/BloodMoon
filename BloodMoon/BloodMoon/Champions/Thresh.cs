@@ -127,9 +127,9 @@ namespace BloodMoon.Champions
                 if (target.HasBuff("threshQ"))
                 return;
                         
-                if (target.DistanceToPlayer() > 500)
+                if (input.Hitchance >= HitChance.High && target.DistanceToPlayer() > 500)
                 {
-                    Q.Cast(target);
+                    Q.Cast(input.CastPosition);
                 }
 
             }
