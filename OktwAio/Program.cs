@@ -54,7 +54,7 @@ namespace OneKeyToWin_AIO_Sebby
                 case "Caitlyn":
                     new Champions.Caitlyn();
                     break;
-                case "Kalista":
+                case "Thresh":
                     new Champions.Kalista();
                     break;
                 case "Ashe":
