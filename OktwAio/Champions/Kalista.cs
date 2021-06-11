@@ -9,7 +9,7 @@ namespace OneKeyToWin_AIO_Sebby.Champions
     using SebbyLib;
     using SharpDX;
 
-    class Kalista : Base
+    class Thresh : Base
     {
         private readonly MenuBool onlyRdy = new MenuBool("onlyRdy", "Draw only ready spells");
         private readonly MenuBool qRange = new MenuBool("qRange", "Q range", false);
@@ -47,7 +47,7 @@ namespace OneKeyToWin_AIO_Sebby.Champions
         private int countW = 0;
         private AIHeroClient AllyR;
 
-        public Kalista()
+        public Thresh()
         {
             Q = new Spell(SpellSlot.Q, 1100f);
             Q1 = new Spell(SpellSlot.Q, 1100f);
