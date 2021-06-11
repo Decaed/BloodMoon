@@ -120,6 +120,7 @@ namespace BloodMoon.Champions
             {
                 var target = Q.GetTarget();
                 var input = Q.GetPrediction(target, true);
+                var Player = GameObjects.Player;
 
                 if (!target.IsValidTarget())
                     return;
