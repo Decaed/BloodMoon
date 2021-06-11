@@ -119,7 +119,6 @@ namespace BloodMoon.Champions
             if (Q.IsReady())
             {
                 var target = Q.GetTarget();
-                var input = Q.GetPrediction(target, true);
                 var Player = GameObjects.Player;
 
                 if (!target.IsValidTarget())
@@ -127,6 +126,8 @@ namespace BloodMoon.Champions
 
                 if (target.HasBuff("threshQ"))
                 return;
+                
+                var input = Q.GetPrediction(target, true);
                         
                 if (input.Hitchance >= HitChance.High && target.DistanceToPlayer() > 500)
                 {
