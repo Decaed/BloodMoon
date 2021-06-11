@@ -55,7 +55,7 @@ namespace OneKeyToWin_AIO_Sebby.Champions
             E = new Spell(SpellSlot.E, 1000f);
             R = new Spell(SpellSlot.R, 1100f);
 
-            Q.SetSkillshot(0.25f, 40f, 2400f, true, SpellType.Line);
+            Q.SetSkillshot(0.50f, 70f, 1900f, true, SpellType.Line);
             Q1.SetSkillshot(0.25f, 40f, 2400f, false, SpellType.Line);
 
             Local.Add(new Menu("draw", "Draw")
@@ -134,11 +134,11 @@ namespace OneKeyToWin_AIO_Sebby.Champions
 
         private void AntiGapcloser_OnGapcloser(AIHeroClient sender, AntiGapcloser.GapcloserArgs args)
         {
-            if (Q.IsReady() && Player.Mana > QMANA + EMANA)
+            if (E.IsReady() && Player.Mana > QMANA + EMANA)
             {
-                if (sender.IsValidTarget(Q.Range))
+                if (sender.IsValidTarget(500))
                 {
-                    Q.Cast(sender);
+                    E.Cast(sender);
                 }
             }
         }
