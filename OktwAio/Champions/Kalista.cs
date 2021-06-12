@@ -140,18 +140,12 @@ namespace OneKeyToWin_AIO_Sebby.Champions
 
         private void CastQ()
         {
-            var t = TargetSelector.GetTarget(Q.Range, DamageType.Physical);
+            var t = TargetSelector.GetTarget(Q.Range, DamageType.Magical);
 
-            if (t.IsValidTarget())
-            {
-                var poutput = Q.GetPrediction(t);
-                var col = poutput.CollisionObjects;
-                }
-                if (poutput && col == nil);
-                Q.Cast(poutput(t));
-                }
-                }
-                }
+                    if (Player.Distance(t) > 500)
+                    {
+                        Q.Cast(Q.GetPrediction(t).CastPosition);
+                    }
 
 
                        
