@@ -163,13 +163,5 @@ namespace OneKeyToWin_AIO_Sebby.Champions
             E.Cast();
         }
                        
-        private void drawText(string msg, AIBaseClient target, System.Drawing.Color color)
-        {
-            var wts = target.HPBarPosition;
-            Drawing.DrawText(wts[0] - msg.Length * 5, wts[1] - 80, color, msg);
-        }
-    
-}
-}
-}
-}
+
+
