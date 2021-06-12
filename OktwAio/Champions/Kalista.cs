@@ -646,53 +646,25 @@ namespace OneKeyToWin_AIO_Sebby.Champions
             E.Cast();
         }
 
-        private void CastQ(bool cast, AIBaseClient t)
+private void CastQ()
         {
-            if (cast)
+            var t = TargetSelector.GetTarget(Q.Range, DamageType.Magical);
+
+            if t.IsValidTarget()
             {
-                CastSpell(Q1, t);
-            }
-            else
-            {
-                CastSpell(Q, t);
-            }
-        }
 
-        private int CountMeleeInRange(float range)
-        {
-            return GameObjects.EnemyHeroes.Where(e => e.IsValidTarget(range) && e.IsMelee).Count();
-        }
+                    if (Player.Distance(t) > 500)
+                    {
+                        Q.Cast(Q.GetPrediction(t).CastPosition);
+                        }
+                        }
+                        }
 
-        private float GetEdmg(AIBaseClient t)
-        {
-            var eDmg = E.GetDamage(t);
 
-            if ((t as AIMinionClient)?.GetJungleType().HasFlag(JungleType.Legendary) ?? false)
-            {
-                eDmg *= 0.5f;
-            }
 
-            if (t.CharacterName == "Blitzcrank" && !t.HasBuff("manabarrier") && !t.HasBuff("manabarriercooldown"))
-            {
-                eDmg -= 0.3f * t.MaxMana;
-            }
 
-            eDmg -= t.HPRegenRate;
-            eDmg -= t.PercentLifeStealMod * 0.005f * t.TotalAttackDamage;
-            eDmg = eDmg * 0.01f * dmgE.Value;
 
-            return eDmg;
-        }
 
-        private int GetEstacks(AIBaseClient t)
-        {
-            return t.GetBuffCount("kalistaexpungemarker");
-        }
-
-        private float GetEtime(AIBaseClient t)
-        {
-            return OktwCommon.GetPassiveTime(t, "kalistaexpungemarker");
-        }
 
         private void drawText(string msg, AIBaseClient target, System.Drawing.Color color)
         {
