@@ -143,7 +143,7 @@ namespace BloodMoon.Champions
 
       if (E.IsReady() && target.DistanceToPlayer() < E.Range)
       {
-        E.Cast(target.Position.Extend(Player.Position, Vector3.Distance(target.Position, Player.Position) + 500));
+        E.Cast(target.Position(Player.Position, Vector3.Distance(target.Position, Player.Position));
       }
     }     
   }  
