@@ -168,5 +168,4 @@ namespace OneKeyToWin_AIO_Sebby.Champions
             var wts = target.HPBarPosition;
             Drawing.DrawText(wts[0] - msg.Length * 5, wts[1] - 80, color, msg);
         }
-    }
-}
+    
