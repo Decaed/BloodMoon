@@ -650,12 +650,13 @@ private void CastQ()
         {
             var t = TargetSelector.GetTarget(Q.Range, DamageType.Magical);
 
-            if t.IsValidTarget()
+            if t.IsValidTarget();
             {
 
                     if (Player.Distance(t) > 500)
                     {
                         Q.Cast(Q.GetPrediction(t).CastPosition);
+                        }
                         }
                         }
                         
