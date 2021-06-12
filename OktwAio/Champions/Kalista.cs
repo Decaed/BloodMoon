@@ -147,8 +147,8 @@ namespace OneKeyToWin_AIO_Sebby.Champions
                 var poutput = Q.GetPrediction(t);
                 var col = poutput.CollisionObjects;
                 }
-                if poutput && col == nil;
-                Q.Cast(poutput(t))
+                if (poutput && col == nil);
+                Q.Cast(poutput(t));
                 }
                 }
 
