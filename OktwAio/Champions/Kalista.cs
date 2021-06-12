@@ -127,10 +127,10 @@ namespace OneKeyToWin_AIO_Sebby.Champions
         
                 private void Game_OnUpdate(EventArgs args)
         {
-            if (E.IsReady())
-            {
-                CastE();
-            }
+            //if (E.IsReady())
+            //{
+                //CastE();
+            //}
 
             if (Q.IsReady())
             {
