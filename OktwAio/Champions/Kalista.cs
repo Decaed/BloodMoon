@@ -162,7 +162,7 @@ namespace OneKeyToWin_AIO_Sebby.Champions
         {
             var t = TargetSelector.GetTarget(Q.Range, DamageType.Magical);
 
-            if (t.IsValidTarget())
+            if (t.IsValidTarget && Combo())
             {
 
                     if (Player.Distance(t) > 500)
