@@ -134,7 +134,7 @@ namespace OneKeyToWin_AIO_Sebby.Champions
 
         private void AntiGapcloser_OnGapcloser(AIHeroClient sender, AntiGapcloser.GapcloserArgs args)
         {
-            if E.IsReady()
+            if (E.IsReady())
             {
                 if (sender.IsValidTarget(500))
                 {
