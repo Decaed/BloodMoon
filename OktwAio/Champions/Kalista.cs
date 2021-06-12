@@ -131,6 +131,71 @@ namespace OneKeyToWin_AIO_Sebby.Champions
                 }
             }
         }
+        
+                private void Game_OnUpdate(EventArgs args)
+        {
+            if (LagFree(3) && R.IsReady())
+            {
+                LogicR();
+            }
+
+            if (IsCastingR || Player.IsCastingImporantSpell())
+            {
+                Orbwalker.MoveEnabled = false;
+                Orbwalker.AttackEnabled = false;
+            }
+            else
+            {
+                Orbwalker.MoveEnabled = true;
+                Orbwalker.AttackEnabled = true;
+            }
+
+            if (Q.IsCharging && (int)(Game.Time * 10) % 2 == 0)
+            {
+                Player.IssueOrder(GameObjectOrder.MoveTo, Game.CursorPos);
+            }
+
+            if (LagFree(1))
+            {
+                SetMana();
+                LogicJungle();
+
+                var manas = new int[] { 0, 30, 33, 36, 42, 48, 54, 63, 72, 81, 90, 102, 114, 126, 138, 150, 165, 180, 195 };
+                var mana = manas[Math.Max(0, Math.Min(18, Player.Level))];
+
+                if (!Player.HasBuff("xerathascended2onhit") || Player.Mana + mana > Player.MaxMana)
+                {
+                    Orbwalker.ForceTarget = null;
+                }
+                else if ((Combo || Harass) && force.Enabled && Orbwalker.GetTarget() == null)
+                {
+                    var minion = GameObjects.EnemyMinions
+                        .Where(e => e.IsValidTarget(Player.AttackRange + Player.BoundingRadius * 2))
+                        .OrderByDescending(e => e.Health)
+                        .FirstOrDefault();
+
+                    if (minion != null && OktwCommon.CanHarass())
+                    {
+                        Orbwalker.ForceTarget = minion;
+                    }
+                }
+            }
+
+            if (autoE.Enabled && E.IsReady())
+            {
+                LogicE();
+            }
+
+            if (LagFree(2) && autoW.Enabled && W.IsReady() && !Player.IsWindingUp)
+            {
+                LogicW();
+            }
+
+            if (LagFree(4) && autoQ.Enabled && Q.IsReady() && !Player.IsWindingUp)
+            {
+                LogicQ();
+            }
+        }
 
         //private void LogicQ()
         //{
