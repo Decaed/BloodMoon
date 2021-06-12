@@ -138,15 +138,19 @@ namespace OneKeyToWin_AIO_Sebby.Champions
             }
         }
 
-        //private void LogicQ()
-        //{
-            //var t = TargetSelector.GetTarget(Q.Range, DamageType.Physical);
+        private void CastQ()
+        {
+            var t = TargetSelector.GetTarget(Q.Range, DamageType.Physical);
 
-            //if (t.IsValidTarget())
-            //{
-                //var poutput = Q.GetPrediction(t);
-                //var col = poutput.CollisionObjects;
-                //var cast = true;
+            if (t.IsValidTarget())
+            {
+                var poutput = Q.GetPrediction(t);
+                var col = poutput.CollisionObjects;
+                }
+                if poutput && col == nil;
+                Q.Cast(poutput(t))
+                }
+                }
 
         private void CastE()
         {
@@ -157,21 +161,7 @@ namespace OneKeyToWin_AIO_Sebby.Champions
 
             E.Cast();
         }
-
-        private void CastQ()
-        {
-            var t = TargetSelector.GetTarget(Q.Range, DamageType.Magical);
-
-            if (t.IsValidTarget && Combo())
-            {
-
-                    if (Player.Distance(t) > 500)
-                    {
-                        Q.Cast(Q.GetPrediction(t).CastPosition);
-                        }
-                        }
-                        }
-                        
+                       
         private void drawText(string msg, AIBaseClient target, System.Drawing.Color color)
         {
             var wts = target.HPBarPosition;
