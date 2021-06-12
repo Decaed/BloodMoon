@@ -107,10 +107,9 @@ namespace OneKeyToWin_AIO_Sebby.Champions
             FarmMenu.Add(minionE);
             FarmMenu.Add(jungleE);
 
-            AIBaseClient.OnDoCast += AIBaseClient_OnDoCast;
+            
             AntiGapcloser.OnGapcloser += AntiGapcloser_OnGapcloser;
-            Drawing.OnDraw += Drawing_OnDraw;
-            Game.OnUpdate += Game_OnUpdate;
+           
         }
         
         private void AntiGapcloser_OnGapcloser(AIHeroClient sender, AntiGapcloser.GapcloserArgs args)
