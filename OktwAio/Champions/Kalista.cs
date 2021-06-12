@@ -153,15 +153,7 @@ namespace OneKeyToWin_AIO_Sebby.Champions
                 }
                 }
 
-        private void CastE()
-        {
-            if (Game.Time - lastCastE < 0.4)
-            {
-                return;
-            }
 
-            E.Cast();
-        }
                        
 
 
