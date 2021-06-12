@@ -169,3 +169,7 @@ namespace OneKeyToWin_AIO_Sebby.Champions
             Drawing.DrawText(wts[0] - msg.Length * 5, wts[1] - 80, color, msg);
         }
     
+}
+}
+}
+}
