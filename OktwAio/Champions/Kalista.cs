@@ -109,6 +109,15 @@ namespace OneKeyToWin_AIO_Sebby.Champions
 
             
             AntiGapcloser.OnGapcloser += AntiGapcloser_OnGapcloser;
+            AIBaseClient.OnDoCast += AIBaseClient_OnDoCast;
+            AIBaseClient.OnIssueOrder += AIBaseClient_OnIssueOrder;
+            Drawing.OnDraw += Drawing_OnDraw;
+            Drawing.OnEndScene += Drawing_OnEndScene;
+            Game.OnUpdate += Game_OnUpdate;
+            Interrupter.OnInterrupterSpell += Interrupter_OnInterrupterSpell;
+            Orbwalker.OnAfterAttack += Orbwalker_OnAfterAttack;
+            Orbwalker.OnBeforeAttack += Orbwalker_OnBeforeAttack;
+            Spellbook.OnCastSpell += Spellbook_OnCastSpell;
            
         }
         
