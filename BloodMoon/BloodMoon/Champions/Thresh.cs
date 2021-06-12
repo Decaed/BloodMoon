@@ -49,6 +49,7 @@ namespace BloodMoon.Champions
             Config.Attach();
 
             GameEvent.OnGameTick += OnGameUpdate;
+            AntiGapcloser.OnGapcloser += AntiGapcloser_OnGapcloser;
             Drawing.OnDraw += OnDraw;
         }
 
@@ -85,6 +86,17 @@ namespace BloodMoon.Champions
 
                 if (GameObjects.Player.SkinId != skinut)
                     GameObjects.Player.SetSkin(skinut);
+            }
+        }
+        
+       private void AntiGapcloser_OnGapcloser(AIHeroClient sender, AntiGapcloser.GapcloserArgs args)
+        {
+            if (E.IsReady())
+            {
+                if (sender.IsValidTarget(500))
+                {
+                    E.Cast(sender);
+                }
             }
         }
 
