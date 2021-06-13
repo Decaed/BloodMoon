@@ -30,13 +30,8 @@ namespace BloodMoon.Champions
             Config = new Menu("Thresh", "BloodMoon", true);
         
             var menuD = new Menu("dsettings", "Drawings");
-            menuD.Add(new MenuBool("drawQ", "Q Range  (Red)", true));
-            menuD.Add(new MenuBool("drawE", "E Range  (Blue)", true));
-            menuD.Add(new MenuBool("drawW", "W Range (Green)", true));
-            menuD.Add(new MenuBool("drawR", "R Range  (White)", false));
-
-            var menuK = new Menu("skinslide", "Skin Changer");
-            menuK.Add(new MenuSliderButton("skin", "SkinID", 0, 0, 20, false));
+            menuD.Add(new MenuBool("drawQ", "1075  (Red)", true));
+            menuD.Add(new MenuBool("drawW", "900 (Green)", true));
 
             var menuRR = new Menu("semiR", "Semi Skills");
             menuRR.Add(new MenuKeyBind("farm", "Lane Clear spells", Keys.Select, KeyBindType.Toggle));
