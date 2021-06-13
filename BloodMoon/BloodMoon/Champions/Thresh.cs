@@ -74,10 +74,6 @@ namespace BloodMoon.Champions
             }
         }
         
-                public static void Game_ProcessSpell(Obj_AI_Base hero, GameObjectProcessSpellCastEventArgs args)
-        {
-                }
-        
         private static void OnDraw(EventArgs args)
         {
             var position = GameObjects.Player.Position;
@@ -124,24 +120,6 @@ namespace BloodMoon.Champions
                 }
 
             }
-        }
-        
-                private static void Unit_OnDash(Obj_AI_Base sender, Dash.DashItem args)
-        {
-            var target = TargetSelector.GetTarget(Q.Range, TargetSelector.DamageType.Magical);
-
-            if (!sender.IsEnemy)
-                return;
-
-            if (sender.NetworkId == target.NetworkId)
-            {
-                if (E.IsReady()
-                   && E.IsInRange(sender.ServerPosition))
-                {
-                    E.Cast(Player.Position.Extend(sender.Position, 400));
-                }
-            }
-
         }
         
         private static void logicE()
