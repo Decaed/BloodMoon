@@ -74,7 +74,7 @@ namespace BloodMoon.Champions
 
             }
             
-                    Obj_AI_Hero target = TargetSelector.GetTarget(Q.Range, TargetSelector.DamageType.Magical);
+            Obj_AI_Hero target = TargetSelector.GetTarget(Q.Range);
 
             if (target != null)
             {
