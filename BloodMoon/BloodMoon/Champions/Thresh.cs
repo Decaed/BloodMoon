@@ -72,23 +72,8 @@ namespace BloodMoon.Champions
                     break;
 
             }
-
-           
-            skinch();
-        }
-
-        private static void skinch()
-        {
-            if (Config["skinslide"].GetValue<MenuSliderButton>("skin").Enabled)
-            {
-                int skinut = Config["skinslide"].GetValue<MenuSliderButton>("skin").Value;
-
-                if (GameObjects.Player.SkinId != skinut)
-                    GameObjects.Player.SetSkin(skinut);
-            }
-        }
-        
-        Obj_AI_Hero target = TargetSelector.GetTarget(Q.Range, TargetSelector.DamageType.Magical);
+            
+                    Obj_AI_Hero target = TargetSelector.GetTarget(Q.Range, TargetSelector.DamageType.Magical);
 
             if (target != null)
             {
@@ -107,6 +92,23 @@ namespace BloodMoon.Champions
                     }
                 }
             }
+
+           
+            skinch();
+        }
+
+        private static void skinch()
+        {
+            if (Config["skinslide"].GetValue<MenuSliderButton>("skin").Enabled)
+            {
+                int skinut = Config["skinslide"].GetValue<MenuSliderButton>("skin").Value;
+
+                if (GameObjects.Player.SkinId != skinut)
+                    GameObjects.Player.SetSkin(skinut);
+            }
+        }
+        
+
        
         private static void OnDraw(EventArgs args)
         {
