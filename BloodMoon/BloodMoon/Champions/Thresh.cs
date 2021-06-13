@@ -135,4 +135,5 @@ namespace BloodMoon.Champions
       }
     }     
   }  
-
+}
+}
