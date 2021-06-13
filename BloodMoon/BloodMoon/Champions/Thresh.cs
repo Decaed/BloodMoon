@@ -50,6 +50,7 @@ namespace BloodMoon.Champions
 
             GameEvent.OnGameTick += OnGameUpdate;
             Drawing.OnDraw += OnDraw;
+            Obj_AI_Hero.OnProcessSpellCast += Game_ProcessSpell;
         }
 
         public static void OnGameUpdate(EventArgs args)
