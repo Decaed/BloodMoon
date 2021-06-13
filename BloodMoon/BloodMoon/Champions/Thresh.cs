@@ -73,7 +73,10 @@ namespace BloodMoon.Champions
 
             }
         }
-    
+        
+                public static void Game_ProcessSpell(Obj_AI_Base hero, GameObjectProcessSpellCastEventArgs args)
+        {
+                }
         
         private static void OnDraw(EventArgs args)
         {
