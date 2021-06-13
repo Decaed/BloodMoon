@@ -73,44 +73,7 @@ namespace BloodMoon.Champions
                     break;
 
             }
-            
-            Obj_AI_Hero target = TargetSelector.GetTarget(Q.Range);
-
-            if (target != null)
-            {
-                if (target.ChampionName == "Katarina")
-                {
-                    if (target.HasBuff("katarinaereduction"))
-                    {
-                        if (target.IsValidTarget(E.Range))
-                        {
-                            E.Cast(target.ServerPosition);
-                            eattempt = Environment.TickCount;
-                        }
-                        if (Environment.TickCount - eattempt >= 90f + Game.Ping
-                            && Q.IsReady())
-                            Q.Cast(target.ServerPosition);
-                    }
-                }
-            }
-
-           
-            skinch();
-        }
-
-        private static void skinch()
-        {
-            if (Config["skinslide"].GetValue<MenuSliderButton>("skin").Enabled)
-            {
-                int skinut = Config["skinslide"].GetValue<MenuSliderButton>("skin").Value;
-
-                if (GameObjects.Player.SkinId != skinut)
-                    GameObjects.Player.SetSkin(skinut);
-            }
-        }
         
-
-       
         private static void OnDraw(EventArgs args)
         {
             var position = GameObjects.Player.Position;
