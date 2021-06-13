@@ -87,6 +87,26 @@ namespace BloodMoon.Champions
                     GameObjects.Player.SetSkin(skinut);
             }
         }
+        
+        Obj_AI_Hero target = TargetSelector.GetTarget(Q.Range, TargetSelector.DamageType.Magical);
+
+            if (target != null)
+            {
+                if (target.ChampionName == "Katarina")
+                {
+                    if (target.HasBuff("katarinaereduction"))
+                    {
+                        if (target.IsValidTarget(E.Range))
+                        {
+                            E.Cast(target.ServerPosition);
+                            eattempt = Environment.TickCount;
+                        }
+                        if (Environment.TickCount - eattempt >= 90f + Game.Ping
+                            && Q.IsReady())
+                            Q.Cast(target.ServerPosition);
+                    }
+                }
+            }
        
         private static void OnDraw(EventArgs args)
         {
