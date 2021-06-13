@@ -74,7 +74,7 @@ namespace BloodMoon.Champions
 
             }
         }
-    }
+    
         
         private static void OnDraw(EventArgs args)
         {
@@ -135,5 +135,4 @@ namespace BloodMoon.Champions
       }
     }     
   }  
-}
-}
+
