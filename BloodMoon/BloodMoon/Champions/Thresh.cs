@@ -98,6 +98,9 @@ namespace BloodMoon.Champions
             if (Q.IsReady())
             {
                 var target = Q.GetTarget();
+            
+                if (target.HasBuff("threshQ"))
+                return;
 
                 if (!target.IsValidTarget())
                     return;
