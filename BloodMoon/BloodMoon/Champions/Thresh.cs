@@ -98,17 +98,14 @@ namespace BloodMoon.Champions
             if (Q.IsReady())
             {
                 var target = Q.GetTarget();
-                var Player = GameObjects.Player;
 
                 if (!target.IsValidTarget())
                     return;
 
-                if (target.HasBuff("threshQ"))
-                return;
-                
                 var input = Q.GetPrediction(target, true);
-                        
-                if (input.Hitchance >= HitChance.High && target.DistanceToPlayer() > 500)
+;
+
+                if (input.Hitchance >= HitChance.High && target.DistanceToPlayer > 500)
                 {
                     Q.Cast(input.CastPosition);
                 }
