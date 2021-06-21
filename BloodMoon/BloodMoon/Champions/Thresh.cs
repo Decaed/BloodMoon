@@ -97,7 +97,7 @@ namespace BloodMoon.Champions
         {
             if (Q.IsReady())
             {
-                var target = TargetSelector.GetTarget(1050);
+                var target = TargetSelector.GetTarget(Q.Range);
             
                 if (target.HasBuff("threshQ"))
                 return;
