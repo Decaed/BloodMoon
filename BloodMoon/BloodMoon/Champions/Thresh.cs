@@ -97,7 +97,7 @@ namespace BloodMoon.Champions
         {
             if (Q.IsReady())
             {
-                var target = Q.GetTarget();
+                var target = Q.GetTarget(Q.Range);
             
                 if (target.HasBuff("threshQ"))
                 return;
@@ -118,7 +118,7 @@ namespace BloodMoon.Champions
         
         private static void logicE()
   {
-      var target = E.GetTarget(); ;
+      var target = E.GetTarget(E.Range); ;
       var Player = GameObjects.Player;
 
       if (E.IsReady() && target.DistanceToPlayer() < E.Range)
