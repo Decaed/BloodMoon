@@ -48,7 +48,7 @@ namespace BloodMoon.Champions
 
         public static void OnGameUpdate(EventArgs args)
         {
-
+            Dashing();
             switch (Orbwalker.ActiveMode)
             {
                 case OrbwalkerMode.Combo:
@@ -109,6 +109,29 @@ namespace BloodMoon.Champions
 ;
 
                 if (input.Hitchance >= HitChance.High && target.DistanceToPlayer() > 500)
+                {
+                    Q.Cast(input.CastPosition);
+                }
+
+            }
+        }
+        
+                private static void Dashing()
+        {
+            if (Q.IsReady())
+            {
+                var target = Q.GetTarget(Q.Range);
+            
+                if (target.HasBuff("threshQ"))
+                return;
+
+                if (!target.IsValidTarget())
+                    return;
+
+                var input = Q.GetPrediction(target, true);
+;
+
+                if (input.Hitchance >= HitChance.Dashing)
                 {
                     Q.Cast(input.CastPosition);
                 }
