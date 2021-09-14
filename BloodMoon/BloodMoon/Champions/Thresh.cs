@@ -49,6 +49,8 @@ namespace BloodMoon.Champions
         public static void OnGameUpdate(EventArgs args)
         {
             Dashing();
+        }
+        {
             switch (Orbwalker.ActiveMode)
             {
                 case OrbwalkerMode.Combo:
