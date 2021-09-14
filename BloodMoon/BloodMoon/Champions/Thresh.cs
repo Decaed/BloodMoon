@@ -107,7 +107,7 @@ namespace BloodMoon.Champions
                 if (!target.IsValidTarget())
                     return;
 
-                var input = Q.GetPrediction(target, true);
+                var input = Q.GetLinePrediction(target, true);
 ;
 
                 if (input.Hitchance >= HitChance.High && target.DistanceToPlayer() > 500)
