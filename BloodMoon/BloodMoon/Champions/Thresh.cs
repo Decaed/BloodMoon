@@ -50,7 +50,7 @@ namespace BloodMoon.Champions
         {
             Dashing();
         
-        {
+        
             switch (Orbwalker.ActiveMode)
             {
                 case OrbwalkerMode.Combo:
