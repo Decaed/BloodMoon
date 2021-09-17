@@ -143,7 +143,7 @@ namespace BloodMoon.Champions
         
         private static void logicE()
   {
-      var target = E.GetTarget(Closest); ;
+      var target = E.GetTarget(ClosestToPlayer); ;
       var Player = GameObjects.Player;
 
       if (E.IsReady() && target.DistanceToPlayer() < E.Range)
