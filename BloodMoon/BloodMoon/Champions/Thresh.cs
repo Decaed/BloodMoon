@@ -107,7 +107,7 @@ namespace BloodMoon.Champions
                 if (!target.IsValidTarget())
                     return;
                 
-                if (!target.DistanceToPlayer() < 500)
+                if (target.DistanceToPlayer() < 500)
                     return;
 
                 var input = Q.GetPrediction(target, true);
