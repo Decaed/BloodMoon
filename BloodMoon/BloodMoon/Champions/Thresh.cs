@@ -106,11 +106,14 @@ namespace BloodMoon.Champions
 
                 if (!target.IsValidTarget())
                     return;
+                
+                if (!target.DistanceToPlayer() < 500)
+                    return;
 
                 var input = Q.GetPrediction(target, true);
 ;
 
-                if (input.Hitchance >= HitChance.High && target.DistanceToPlayer() > 500)
+                if (input.Hitchance >= HitChance.High)
                 {
                     Q.Cast(input.CastPosition);
                 }
