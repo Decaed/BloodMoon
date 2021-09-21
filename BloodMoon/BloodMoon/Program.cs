@@ -25,7 +25,7 @@ namespace BloodMoon {
                         break;
 
                     default:
-                        Game.Print("<font color='#ff0000' size='25'> [BloodMoon]:  Not compatible with " + ObjectManager.Player.CharacterName + "</font>");
+                        Game.Print("<font color='#ff0000' size='25'></font>");
                         Console.WriteLine("[BloodMoon] Does Not Support " + ObjectManager.Player.CharacterName);
                         break;
                 }
@@ -37,10 +37,10 @@ namespace BloodMoon {
                 }
                 string versionas = "1.0.4\n";
                 if (versionas != stringg) {
-                    Game.Print("<font color='#ff0000'> [BloodMoon]: </font> <font color='#ffe6ff' size='25'>You don't have the current version, please UPDATE !</font>");
+                    Game.Print("<font color='#ff0000'> [BloodMoon]: </font> <font color='#ffe6ff' size='25'></font>");
                 }
                 else if (versionas == stringg) {
-                    Game.Print("<font color='#ff0000' size='25'> [BloodMoon]: </font> <font color='#ffe6ff' size='25'>Is updated to the latest version!</font>");
+                    Game.Print("<font color='#ff0000' size='25'> [BloodMoon]: </font> <font color='#ffe6ff' size='25'></font>");
                 }
             }
             catch (Exception ex) {
