@@ -100,15 +100,15 @@ namespace BloodMoon.Champions
             if (Q.IsReady())
             {
                 var target = Q.GetTarget(1050);
-            
-                if (target.HasBuff("threshQ"))
-                return;
-
+                
                 if (!target.IsValidTarget())
                     return;
                 
                 if (target.DistanceToPlayer() < 500)
                     return;
+            
+                if (target.HasBuff("threshQ"))
+                return;
 
                 var input = Q.GetPrediction(target, true);
 ;
@@ -127,14 +127,14 @@ namespace BloodMoon.Champions
             {
                 var target = Q.GetTarget(Q.Range);
             
-                if (target.HasBuff("threshQ"))
-                return;
+                if (!target.IsValidTarget())
+                    return;
                 
                 if (target.DistanceToPlayer() < 500)
                     return;
-
-                if (!target.IsValidTarget())
-                    return;
+                
+                if (target.HasBuff("threshQ"))
+                return;
 
                 var input = Q.GetPrediction(target, true);
 ;
