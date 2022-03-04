@@ -94,25 +94,7 @@ namespace BloodMoon.Champions
                 Render.Circle.DrawCircle(position, R.Range, System.Drawing.Color.White);
             }
         }
-        
-        private static void OnGapcloser(AIHeroClient sender, GapCloser.GapcloserArgs args)
-        {
-            if (ObjectManager.Player.IsDead || ObjectManager.Player.IsRecalling())
-            {
-                return;
-            }
-
-            if (MenuGUI.IsChatOpen || MenuGUI.IsShopOpen)
-            {
-                return;
-            }
-
-            if (W.IsReady() && wgap.Enabled && args.EndPosition.DistanceToPlayer() < wrange)
-            {
-                W.Cast(sender);
-            }
-        }
-   
+      
         private static void logicQ()
         {
             if (Q.IsReady())
