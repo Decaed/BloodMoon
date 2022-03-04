@@ -95,7 +95,7 @@ namespace BloodMoon.Champions
             }
         }
         
-        private static void OnGapcloser(AIHeroClient sender, Gapcloser.GapcloserArgs args)
+        private static void OnGapcloser(AIHeroClient sender, GapCloser.GapcloserArgs args)
         {
             if (ObjectManager.Player.IsDead || ObjectManager.Player.IsRecalling())
             {
