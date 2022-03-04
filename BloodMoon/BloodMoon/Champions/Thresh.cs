@@ -94,28 +94,7 @@ namespace BloodMoon.Champions
                 Render.Circle.DrawCircle(position, R.Range, System.Drawing.Color.White);
             }
         }
-        
-           public static void OnEnemyGapCloser(GapCloser gapcloser)
-        {
-            if (_E.IsReady() && Player.Distance(gapcloser.Sender) < _E.Range + 100)
-            {
-                if (gapcloser.SpellName == "LeonaZenithBlade")
-                {
-                    if (Player.Distance(gapcloser.Start) < Player.Distance(gapcloser.End))
-                        PullFlay(gapcloser.Sender);
-                    else
-                        Utility.DelayAction.Add(75, delegate { PushFlay(gapcloser.Sender); });
-                }
-                else
-                {
-                    if (Player.Distance(gapcloser.Start) < Player.Distance(gapcloser.End))
-                        PullFlay(gapcloser.Sender);
-                    else
-                        PushFlay(gapcloser.Sender);
-                }
-            }
-        }
-
+   
         private static void logicQ()
         {
             if (Q.IsReady())
