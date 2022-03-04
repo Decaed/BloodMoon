@@ -130,9 +130,6 @@ namespace BloodMoon.Champions
                 if (!target.IsValidTarget())
                     return;
                 
-                if (target.DistanceToPlayer() < 500)
-                    return;
-                
                 if (target.HasBuff("threshQ"))
                 return;
 
