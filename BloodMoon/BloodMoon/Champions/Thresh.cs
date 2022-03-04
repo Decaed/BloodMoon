@@ -95,11 +95,9 @@ namespace BloodMoon.Champions
             }
         }
         
-                public static void OnEnemyGapCloser(ActiveGapcloser gapcloser)
+                public static void OnEnemyGapCloser(Gapcloser gapcloser)
         {
-            if (_E.IsReady() &&
-                Config.SubMenu("Misc").SubMenu("Gapclosers").Item(gapcloser.SpellName.ToLower()).GetValue<bool>() &&
-                Player.Distance(gapcloser.Sender) < _E.Range + 100)
+            if (_E.IsReady() && Player.Distance(gapcloser.Sender) < _E.Range + 100)
             {
                 if (gapcloser.SpellName == "LeonaZenithBlade")
                 {
