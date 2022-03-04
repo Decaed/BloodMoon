@@ -94,6 +94,8 @@ namespace BloodMoon.Champions
                 Render.Circle.DrawCircle(position, R.Range, System.Drawing.Color.White);
             }
         }
+        
+        private static void OnGapcloser(AIHeroClient sender, Gapcloser.GapcloserArgs args)
    
         private static void logicQ()
         {
