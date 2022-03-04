@@ -21,7 +21,7 @@ namespace BloodMoon.Champions
             {
                 return;
             }
-            Q = new Spell(SpellSlot.Q, 1050);
+            Q = new Spell(SpellSlot.Q, 1025);
             E = new Spell(SpellSlot.E, 500);
 
             Q.SetSkillshot(0.5f, 70f, 1900f, true, SpellType.Line);
@@ -99,7 +99,7 @@ namespace BloodMoon.Champions
         {
             if (Q.IsReady())
             {
-                var target = Q.GetTarget(1050);
+                var target = Q.GetTarget(1025);
                 
                 if (!target.IsValidTarget())
                     return;
