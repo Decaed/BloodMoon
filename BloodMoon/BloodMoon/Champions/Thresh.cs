@@ -96,6 +96,21 @@ namespace BloodMoon.Champions
         }
         
         private static void OnGapcloser(AIHeroClient sender, Gapcloser.GapcloserArgs args)
+        {
+            if (ObjectManager.Player.IsDead || ObjectManager.Player.IsRecalling())
+            {
+                return;
+            }
+
+            if (MenuGUI.IsChatOpen || MenuGUI.IsShopOpen)
+            {
+                return;
+            }
+
+            if (W.IsReady() && wgap.Enabled && args.EndPosition.DistanceToPlayer() < wrange)
+            {
+                W.Cast(sender);
+            }
         }
    
         private static void logicQ()
