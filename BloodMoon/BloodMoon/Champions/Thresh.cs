@@ -95,7 +95,7 @@ namespace BloodMoon.Champions
             }
         }
         
-                public static void OnEnemyGapCloser(Gapcloser gapcloser)
+           public static void OnEnemyGapCloser(GapCloser gapcloser)
         {
             if (_E.IsReady() && Player.Distance(gapcloser.Sender) < _E.Range + 100)
             {
