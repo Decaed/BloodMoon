@@ -96,6 +96,7 @@ namespace BloodMoon.Champions
         }
         
         private static void OnGapcloser(AIHeroClient sender, Gapcloser.GapcloserArgs args)
+        }
    
         private static void logicQ()
         {
