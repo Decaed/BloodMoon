@@ -120,7 +120,7 @@ namespace BloodMoon.Champions
                 var input = Q.GetPrediction(target, true);
 ;
 
-                if (input.Hitchance >= HitChance.Medium)
+                if (input.Hitchance >= HitChance.High)
                 {
                     Q.Cast(input.CastPosition);
                 }
