@@ -104,6 +104,8 @@ namespace BloodMoon.Champions
         
        private void TheGodHook()
         {
+           var target = Q.GetTarget(1050);
+           
             if (target != null && Q.IsReady())
             {
                 PredictionOutput prediction = Q.GetPrediction(target);
