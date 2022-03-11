@@ -104,9 +104,10 @@ namespace BloodMoon.Champions
         
        private static void TheGodHook()
         {
-        if (target.HasBuff("threshQ"))
-                return;
            var target = Q.GetTarget(1050);
+           
+         if (target.HasBuff("threshQ"))
+                return;
            
             if (target != null && Q.IsReady())
             {
