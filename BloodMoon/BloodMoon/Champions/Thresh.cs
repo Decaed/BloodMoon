@@ -101,6 +101,22 @@ namespace BloodMoon.Champions
                 Render.Circle.DrawCircle(position, R.Range, System.Drawing.Color.White);
             }
         }
+        
+        private static void castQ()
+        {
+            if(Q.IsReady())
+            {
+                var Target = FunnySlayerCommon.FSTargetSelector.GetFSTarget(Q.Range);
+                if(Target != null)
+                {
+                    var Pred = SebbyLibPorted.Prediction.Prediction.GetPrediction(Q, Target);
+                    if(Target.DistanceToPlayer() > QMin.Value && Pred.Hitchance >= SebbyLibPorted.Prediction.HitChance.High)
+                    {
+                        if (Q.SPredictionCast(Target, EnsoulSharp.SDK.HitChance.High))
+                            return;
+                    }
+                }              
+            }
       
         private static void logicQ()
         {
