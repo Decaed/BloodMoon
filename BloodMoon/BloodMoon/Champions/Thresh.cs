@@ -101,25 +101,7 @@ namespace BloodMoon.Champions
                 Render.Circle.DrawCircle(position, R.Range, System.Drawing.Color.White);
             }
         }
-        
-        private static void castQ()
-        {
-            if(Q.IsReady())
-            {
-                var target = Q.GetTarget(1050);
-                if (!target.IsValidTarget())
-                    return;
-                {
-                    var Pred = SebbyLibPorted.Prediction.Prediction.GetPrediction(Q, target);
-                    if(Pred.Hitchance >= SebbyLibPorted.Prediction.HitChance.High)
-                    {
-                        if (Q.SPredictionCast(target, EnsoulSharp.SDK.HitChance.High))
-                            return;
-                    }
-                }              
-            }
-        }
-      
+             
         private static void logicQ()
         {
             if (Q.IsReady())
@@ -138,7 +120,7 @@ namespace BloodMoon.Champions
                 var input = Q.GetPrediction(target, true);
 ;
 
-                if (input.Hitchance >= HitChance.High)
+                if (input.Hitchance >= HitChance.Medium)
                 {
                     Q.Cast(input.CastPosition);
                 }
