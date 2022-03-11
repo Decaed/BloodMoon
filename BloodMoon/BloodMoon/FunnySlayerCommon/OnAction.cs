@@ -47,7 +47,7 @@ namespace FunnySlayerCommon
             }
             else
             {
-                Game.OnUpdate -= Game_OnUpdate1;
+                
                 AIBaseClient.OnProcessSpellCast -= AIBaseClient_OnProcessSpellCast;
             }
 
@@ -60,7 +60,7 @@ namespace FunnySlayerCommon
                 }
                 else
                 {
-                    Game.OnUpdate -= Game_OnUpdate1;
+                    
                     AIBaseClient.OnProcessSpellCast -= AIBaseClient_OnProcessSpellCast;
                 }
             };
