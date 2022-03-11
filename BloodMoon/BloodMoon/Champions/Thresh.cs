@@ -33,6 +33,11 @@ namespace BloodMoon.Champions
             var menuD = new Menu("dsettings", "Drawings");
             menuD.Add(new MenuBool("drawQ", "1075  (Red)", true));
             menuD.Add(new MenuBool("drawW", "900 (Green)", true));
+            
+            var menuD = new Menu("Helper", "Helper");
+            //FunnySlayerCommon.MenuClass.AddTargetSelectorMenu(HelperMenu);
+            SPredictionMash.ConfigMenu.Initialize(HelperMenu, "Get Prediction");
+            //new SebbyLibPorted.Orbwalking.Orbwalker(HelperMenu);
 
             var menuRR = new Menu("semiR", "Semi Skills");
             menuRR.Add(new MenuKeyBind("farm", "Lane Clear spells", Keys.Select, KeyBindType.Toggle));
