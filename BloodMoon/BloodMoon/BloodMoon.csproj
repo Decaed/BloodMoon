@@ -95,6 +95,47 @@
     <Compile Include="SPrediction\StasisPrediction.cs" />
     <Compile Include="SPrediction\Utility.cs" />
     <Compile Include="SPrediction\VectorPrediction.cs" />
+    <Compile Include="FunnySlayerCommon\FSPrediction\AoePrediction.cs" />
+    <Compile Include="FunnySlayerCommon\FSPrediction\Collision.cs" />
+    <Compile Include="FunnySlayerCommon\FSPrediction\CollisionableObjects.cs" />
+    <Compile Include="FunnySlayerCommon\FSPrediction\HitChance.cs" />
+    <Compile Include="FunnySlayerCommon\FSPrediction\Prediction.cs" />
+    <Compile Include="FunnySlayerCommon\FSPrediction\PredictionInput.cs" />
+    <Compile Include="FunnySlayerCommon\FSPrediction\PredictionOutput.cs" />
+    <Compile Include="FunnySlayerCommon\FSPrediction\SkillshotType.cs" />
+    <Compile Include="FunnySlayerCommon\FSPrediction\StoredPath.cs" />
+    <Compile Include="FunnySlayerCommon\FSspell.cs" />
+    <Compile Include="FunnySlayerCommon\FSTargetSelector.cs" />
+    <Compile Include="FunnySlayerCommon\MenuClass.cs" />
+    <Compile Include="FunnySlayerCommon\OnAction.cs" />
+    <Compile Include="SebbyLibPorted\Cache.cs" />
+    <Compile Include="SebbyLibPorted\Events.cs" />
+    <Compile Include="SebbyLibPorted\Geometry.cs" />
+    <Compile Include="SebbyLibPorted\HealthPrediction.cs" />
+    <Compile Include="SebbyLibPorted\MEC.cs" />
+    <Compile Include="SebbyLibPorted\MenuExtensions.cs" />
+    <Compile Include="SebbyLibPorted\Movement.cs" />
+    <Compile Include="SebbyLibPorted\OktwCommon.cs" />
+    <Compile Include="SebbyLibPorted\Orbwalking.cs" />
+    <Compile Include="SebbyLibPorted\PredictionOktw.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\AIHeroClientExtensions.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\ArcPrediction.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\CirclePrediction.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\ClipperWrapper.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\Collision.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\ConePrediction.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\ConfigMenu.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\Drawings.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\Geometry.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\LinePrediction.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\MinionManager.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\PathTracker.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\Prediction.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\RingPrediction.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\SpellExtensions.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\StasisPrediction.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\Utility.cs" />
+    <Compile Include="SebbyLibPorted\SPrediction\VectorPrediction.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
