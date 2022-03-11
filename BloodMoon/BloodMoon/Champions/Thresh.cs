@@ -102,7 +102,7 @@ namespace BloodMoon.Champions
             }
         }
         
-       private void TheGodHook()
+       private static void TheGodHook()
         {
            var target = Q.GetTarget(1050);
            
