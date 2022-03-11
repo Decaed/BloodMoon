@@ -43,7 +43,7 @@ namespace FunnySlayerCommon
             if (MenuClass.SetOrbWalkerTarget.Enabled)
             {
                 AIBaseClient.OnProcessSpellCast += AIBaseClient_OnProcessSpellCast;
-                Game.OnUpdate += Game_OnUpdate1;
+                
             }
             else
             {
@@ -55,7 +55,7 @@ namespace FunnySlayerCommon
             {
                 if (MenuClass.SetOrbWalkerTarget.Enabled)
                 {
-                    Game.OnUpdate += Game_OnUpdate1;
+                    
                     AIBaseClient.OnProcessSpellCast += AIBaseClient_OnProcessSpellCast;
                 }
                 else
