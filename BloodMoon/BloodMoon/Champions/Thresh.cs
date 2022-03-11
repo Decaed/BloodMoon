@@ -102,13 +102,13 @@ namespace BloodMoon.Champions
             }
         }
         
-       private void TheGodHook(Obj_AI_Base target)
+       private void TheGodHook()
         {
             if (target != null && Q.IsReady())
             {
                 PredictionOutput prediction = Q.GetPrediction(target);
                 {
-                    if (prediction.Hitchance == HitChance.High && _menu.Item("hitchance").GetValue<StringList>().SelectedIndex == 2)
+                    if (prediction.Hitchance == HitChance.High)
                             Q.Cast(prediction.CastPosition);                   
                 }
             }
