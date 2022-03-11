@@ -13,7 +13,7 @@ namespace BloodMoon.Champions
     public class Thresh
     {
         private static AIHeroClient ME = GameObjects.Player;
-        private static Spell Q, W, E, R, Q2;
+        private static Spell Q, E,
         private static Menu Config;
 
         public static void OnGameLoad()
