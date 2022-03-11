@@ -106,13 +106,14 @@ namespace BloodMoon.Champions
         {
             if(Q.IsReady())
             {
-                var Target = FunnySlayerCommon.FSTargetSelector.GetFSTarget(Q.Range);
-                if(Target != null)
+                var target = Q.GetTarget(1050);
+                if (!target.IsValidTarget())
+                    return;
                 {
-                    var Pred = SebbyLibPorted.Prediction.Prediction.GetPrediction(Q, Target);
-                    if(Target.DistanceToPlayer() > 500 && Pred.Hitchance >= SebbyLibPorted.Prediction.HitChance.High)
+                    var Pred = SebbyLibPorted.Prediction.Prediction.GetPrediction(Q, target);
+                    if(target.DistanceToPlayer() > 500 && Pred.Hitchance >= SebbyLibPorted.Prediction.HitChance.High)
                     {
-                        if (Q.SPredictionCast(Target, EnsoulSharp.SDK.HitChance.High))
+                        if (Q.SPredictionCast(target, EnsoulSharp.SDK.HitChance.High))
                             return;
                     }
                 }              
