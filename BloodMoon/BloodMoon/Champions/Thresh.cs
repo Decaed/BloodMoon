@@ -101,6 +101,17 @@ namespace BloodMoon.Champions
                 Render.Circle.DrawCircle(position, R.Range, System.Drawing.Color.White);
             }
         }
+        
+       private void TheGodHook(Obj_AI_Base target)
+        {
+            if (target != null && Q.IsReady())
+            {
+                PredictionOutput prediction = Q.GetPrediction(target);
+                {
+                    if (prediction.Hitchance == HitChance.High && _menu.Item("hitchance").GetValue<StringList>().SelectedIndex == 2)
+                            Q.Cast(prediction.CastPosition);                   
+                }
+            }
              
         private static void logicQ()
         {
