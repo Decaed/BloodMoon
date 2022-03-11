@@ -111,7 +111,7 @@ namespace BloodMoon.Champions
                     return;
                 {
                     var Pred = SebbyLibPorted.Prediction.Prediction.GetPrediction(Q, target);
-                    if(target.DistanceToPlayer() > 500 && Pred.Hitchance >= SebbyLibPorted.Prediction.HitChance.High)
+                    if(Pred.Hitchance >= SebbyLibPorted.Prediction.HitChance.High)
                     {
                         if (Q.SPredictionCast(target, EnsoulSharp.SDK.HitChance.High))
                             return;
