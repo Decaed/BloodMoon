@@ -36,7 +36,7 @@ namespace BloodMoon.Champions
             
             var menuP = new Menu("Helper", "Helper");
             //FunnySlayerCommon.MenuClass.AddTargetSelectorMenu(HelperMenu);
-            SPredictionMash.ConfigMenu.Initialize(HelperMenu, "Get Prediction");
+            SPredictionMash.ConfigMenu.Initialize("Helper", "Get Prediction");
             //new SebbyLibPorted.Orbwalking.Orbwalker(HelperMenu);
 
             var menuRR = new Menu("semiR", "Semi Skills");
