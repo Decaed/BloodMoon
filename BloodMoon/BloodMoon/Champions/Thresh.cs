@@ -62,7 +62,7 @@ namespace BloodMoon.Champions
             {
                 case OrbwalkerMode.Combo:
                     logicE();
-                    TheGodHook();
+                    logicQ();
                     break;
 
                 case OrbwalkerMode.Harass:
@@ -101,24 +101,7 @@ namespace BloodMoon.Champions
                 Render.Circle.DrawCircle(position, R.Range, System.Drawing.Color.White);
             }
         }
-        
-       private static void TheGodHook()
-        {
-           var target = Q.GetTarget(1050);
-           
-         if (target.HasBuff("threshQ"))
-                return;
-           
-            if (target != null && Q.IsReady())
-            {
-                PredictionOutput prediction = Q.GetPrediction(target);
-                {
-                    if (prediction.Hitchance >= HitChance.High)
-                            Q.Cast(prediction.CastPosition);                   
-                }
-            }
-       }
-             
+                   
         private static void logicQ()
         {
             if (Q.IsReady())
