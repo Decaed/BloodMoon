@@ -113,7 +113,7 @@ namespace BloodMoon.Champions
             {
                 PredictionOutput prediction = Q.GetPrediction(target);
                 {
-                    if (prediction.Hitchance == HitChance.High)
+                    if (prediction.Hitchance >= HitChance.High)
                             Q.Cast(prediction.CastPosition);                   
                 }
             }
