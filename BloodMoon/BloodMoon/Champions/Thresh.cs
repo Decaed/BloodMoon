@@ -45,6 +45,7 @@ namespace BloodMoon.Champions
             Config.Add(menuD);
             Config.Add(menuP);
             Config.Add(menuRR);
+            SPrediction.Prediction.Initialize(pred);
             
 
             Config.Attach();
