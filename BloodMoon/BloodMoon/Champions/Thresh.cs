@@ -113,6 +113,23 @@ namespace BloodMoon.Champions
             Q.SPredictionCast(target, qhit);
         }
         
+        private static void AutoCast()
+        {
+            if (Q.IsReady())
+            {
+                foreach (
+                    var ii in
+                        ObjectManager.Get<AIHeroClient>()
+                            .Where(x => x.IsValidTarget(Q.Range)))
+                {
+                        Q.SPredictionCast(ii, HitChance.Dash);
+        
+
+                    }
+                }
+            }
+        }
+        
         private static void logicE()
   {
       var target = E.GetTarget(E.Range);
