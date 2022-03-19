@@ -254,7 +254,7 @@ namespace SPrediction
         }
         #endregion
 
-        public static Vector3 FSPredCastPos(this Spell s, AIBaseClient target)
+        public static Vector3 CastPos(this Spell s, AIBaseClient target)
         {
             if(target != null)
             {
