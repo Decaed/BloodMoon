@@ -53,12 +53,8 @@ namespace BloodMoon.Champions
 
         public static void OnGameUpdate(EventArgs args)
         {
-             if (target.HasBuff("threshQ"))
-                return;
-            {
            AutoCast();
         
-            }      
             switch (Orbwalker.ActiveMode)
             {
                 case OrbwalkerMode.Combo:
