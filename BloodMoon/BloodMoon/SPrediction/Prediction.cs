@@ -26,7 +26,7 @@ using EnsoulSharp.SDK.MenuUI;
 
 using SharpDX;
 
-namespace SPredictionMash
+namespace SPrediction
 {
     /// <summary>
     /// Spacebar Prediction class
