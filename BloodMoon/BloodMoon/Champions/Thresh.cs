@@ -156,7 +156,7 @@ namespace BloodMoon.Champions
       var target = E.GetTarget(E.Range);
       var Player = GameObjects.Player;
 
-      if (E.IsReady() && ObjectManager.Player.Distance(target.Position) < E.Range)
+      if (E.IsReady() && ObjectManager.Player.Distance(target.Position) < 500)
       {
         E.Cast(target.Position.Extend(ObjectManager.Player.Position, Vector3.Distance(target.Position, ObjectManager.Player.Position) + 500));
       }
