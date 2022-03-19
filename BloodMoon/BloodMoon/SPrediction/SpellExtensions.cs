@@ -16,11 +16,11 @@
  along with SPrediction. If not, see <http://www.gnu.org/licenses/>.
 */
 
-using System;
 
+
+using System;
 using EnsoulSharp;
 using EnsoulSharp.SDK;
-using EnsoulSharp.SDK.Prediction;
 
 using SharpDX;
 
