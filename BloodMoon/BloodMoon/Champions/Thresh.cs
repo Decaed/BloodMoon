@@ -53,7 +53,7 @@ namespace BloodMoon.Champions
 
         public static void OnGameUpdate(EventArgs args)
         {
-            Dashing();
+           
         
         
             switch (Orbwalker.ActiveMode)
@@ -61,7 +61,7 @@ namespace BloodMoon.Champions
                 case OrbwalkerMode.Combo:
                     logicE();
                     break;
-                    logicQ();
+                    CastQ();
                     break;
 
                 case OrbwalkerMode.Harass:
