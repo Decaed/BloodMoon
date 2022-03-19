@@ -101,31 +101,19 @@ namespace BloodMoon.Champions
             }
         }
                    
-        private static void logicQ()
+        private static void CastQ()
         {
-            if (Q.IsReady())
-            {
-                var target = Q.GetTarget(1050);
-                
-                if (!target.IsValidTarget())
-                    return;
-                
-                if (target.DistanceToPlayer() < 500)
-                    return;
-            
-                if (target.HasBuff("threshQ"))
+            var qhit = HitChance.High;
+            var target = TargetSelector.GetTarget(Q.Range);
+            if (target == null)
                 return;
 
-                var input = Q.GetPrediction(target, true);
-;
+            if (target.HasBuff("threshQ"))
+                return;
 
-                if (input.Hitchance >= HitChance.High)
-                {
-                    Q.Cast(input.CastPosition);
-                }
-
-            }
+            Q.SPredictionCast(target, qhit);
         }
+
                
         private static void Dashing()
         {
