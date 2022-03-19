@@ -23,7 +23,7 @@ namespace BloodMoon.Champions
             {
                 return;
             }
-            Q = new Spell(SpellSlot.Q, 1050);
+            Q = new Spell(SpellSlot.Q, 1100);
             E = new Spell(SpellSlot.E, 500);
             
             Q.SetSkillshot(0.5f, 70, 1900, true, SpellType.Line);
