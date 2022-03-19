@@ -295,7 +295,7 @@ namespace SPrediction
             #region if fs prediction selected
             if (ConfigMenu.SelectedPrediction.Index == 2)
             {
-                var pout = FSpred.Prediction.Prediction.GetPrediction(s, t, minHit > 1);
+                var pout = Prediction.GetPrediction(s, t, minHit > 1);
 
                 if (minHit > 1)
                     if (pout.AoeTargetsHitCount >= minHit)
@@ -402,7 +402,7 @@ namespace SPrediction
             #region if fs prediction selected
             if (ConfigMenu.SelectedPrediction.Index == 2)
             {
-                var pout = FSpred.Prediction.Prediction.GetPrediction(s, t, minHit > 1);
+                var pout = Prediction.GetPrediction(s, t, minHit > 1);
 
                 if (minHit > 1)
                     if (pout.AoeTargetsHitCount >= minHit)
