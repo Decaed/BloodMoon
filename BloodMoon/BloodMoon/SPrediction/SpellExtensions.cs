@@ -278,48 +278,6 @@ namespace SPrediction
             /*if (!s.IsSkillShot)
                 return Vector3.Zero;*/
 
-            #region if common prediction selected
-            if (ConfigMenu.SelectedPrediction.Index == 1)
-            {
-                var pout = s.GetPrediction(t, minHit > 1);
-
-                if (minHit > 1)
-                    if (pout.AoeTargetsHitCount >= minHit)
-                        return pout.CastPosition;
-
-                if (pout.Hitchance >= hc)
-                    return pout.CastPosition;
-            }
-            #endregion
-
-            #region if fs prediction selected
-            if (ConfigMenu.SelectedPrediction.Index == 2)
-            {
-                var pout = Prediction.GetPrediction(s, t, minHit > 1);
-
-                if (minHit > 1)
-                    if (pout.AoeTargetsHitCount >= minHit)
-                        return pout.CastPosition;
-
-                if ((int)pout.Hitchance >= (int)hc)
-                    return pout.CastPosition;
-            }
-            #endregion
-
-            #region If Exory Prediction Selected
-            if (ConfigMenu.SelectedPrediction.Index == 3)
-            {
-                var pout = SebbyLibPorted.Prediction.Prediction.GetPrediction(s, t, minHit > 1);
-
-                if (minHit > 1)
-                    if (pout.AoeTargetsHitCount >= minHit)
-                        return pout.CastPosition;
-
-                if ((int)pout.Hitchance >= (int)hc)
-                    return pout.CastPosition;
-            }
-            #endregion
-
             /*if (minHit > 1)
                 return SPredictionCastAoe(s, minHit);*/
 
