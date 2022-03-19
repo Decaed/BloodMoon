@@ -144,7 +144,7 @@ namespace BloodMoon.Champions
 
                 if (input.Hitchance >= HitChance.Dash)
                 {
-                    Q.SPredictionCast(input.CastPosition);
+                    Q.SPredictionCast(target);
                 }
 
             }
