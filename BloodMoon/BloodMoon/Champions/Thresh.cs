@@ -40,7 +40,6 @@ namespace BloodMoon.Champions
             menuRR.Add(new MenuKeyBind("farm", "Lane Clear spells", Keys.Select, KeyBindType.Toggle));
             
             Config.Add(menuD);
-            Config.Add(menuP);
             Config.Add(menuRR);
             SPrediction.Prediction.Initialize(pred);
             
