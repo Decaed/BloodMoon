@@ -102,7 +102,7 @@ namespace BloodMoon.Champions
             }
         }
                    
-        private static void logicQ()
+        private static void logicQ(Obj_AI_Hero target)
         {
             if (Q.IsReady())
             {
