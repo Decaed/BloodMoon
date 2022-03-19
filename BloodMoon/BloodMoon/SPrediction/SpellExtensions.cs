@@ -106,11 +106,11 @@ namespace SPrediction
 
             switch (s.Type)
             {
-                case SkillshotType.Line:
+                case SpellType.Line:
                     return LinePrediction.GetAoePrediction(s.Width, s.Delay, s.Speed, s.Range, s.From.ToVector2(), s.RangeCheckFrom.ToVector2());
-                case SkillshotType.Circle:
+                case SpellType.Circle:
                     return CirclePrediction.GetAoePrediction(s.Width, s.Delay, s.Speed, s.Range, s.From.ToVector2(), s.RangeCheckFrom.ToVector2());
-                case SkillshotType.Cone:
+                case SpellType.Cone:
                     return ConePrediction.GetAoePrediction(s.Width, s.Delay, s.Speed, s.Range, s.From.ToVector2(), s.RangeCheckFrom.ToVector2());
             }
 
