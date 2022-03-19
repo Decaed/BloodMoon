@@ -153,12 +153,12 @@ namespace BloodMoon.Champions
         
         private static void logicE()
   {
-      var target = E.GetTarget(E.Range); ;
+      var target = TargetSelector.GetTarget(E.Range);
       var Player = GameObjects.Player;
 
-      if (E.IsReady() && target.DistanceToPlayer() < E.Range)
+      if (E.IsReady() && ObjectManager.Player.Distance(target.Position) < E.Range)
       {
-        E.Cast(target.Position.Extend(Player.Position, Vector3.Distance(target.Position, Player.Position) + 500));
+        E.Cast(target.Position.Extend(ObjectManager.Player.Position, Vector3.Distance(target.Position, ObjectManager.Player.Position) + 500));
       }
     }     
   }  
