@@ -46,8 +46,8 @@ namespace BloodMoon.Champions
             
 
             Config.Attach();
-
             GameEvent.OnGameTick += OnGameUpdate;
+            AntiGapcloser.OnGapcloser += Gapcloser_OnGapcloser;
             Drawing.OnDraw += OnDraw;
         } 
 
@@ -96,6 +96,28 @@ namespace BloodMoon.Champions
             if (Config["dsettings"].GetValue<MenuBool>("drawR").Enabled)
             {
                 Render.Circle.DrawCircle(position, R.Range, System.Drawing.Color.White);
+            }
+        }
+        
+        private static void Gapcloser_OnGapcloser(AIHeroClient sender, AntiGapcloser.GapcloserArgs args)
+        {
+            if (sender.IsAlly)
+                return;
+
+            if (args.SpellName == "ZedR")
+                return;
+
+            if(args.EndPosition.DistanceToPlayer() < args.StartPosition.DistanceToPlayer())
+            {
+                if(args.EndPosition.DistanceToPlayer() <= 500 && sender.IsValidTarget(550))
+                {
+                    if (E.Cast(sender) == CastStates.SuccessfullyCasted)
+                        return;
+                }
+                else
+                {
+                    return;
+                }
             }
         }
                    
