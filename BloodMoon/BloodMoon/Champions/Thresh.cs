@@ -115,6 +115,9 @@ namespace BloodMoon.Champions
         
         private static void AutoCast()
         {
+          if (target.HasBuff("threshQ"))
+                return;
+            {
             if (Q.IsReady())
             {
                 foreach (
