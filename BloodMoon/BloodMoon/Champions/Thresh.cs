@@ -125,9 +125,6 @@ namespace BloodMoon.Champions
                 {
                 if (ii.HasBuff("threshQ"))
                 return;
-                    {
-                        if (ObjectManager.Player.Distance(ii.Position) < 500)
-                        return;
                         {
                         Q.SPredictionCast(ii, HitChance.Dash);
                         }
