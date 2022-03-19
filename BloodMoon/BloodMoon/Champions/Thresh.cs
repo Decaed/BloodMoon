@@ -102,7 +102,7 @@ namespace BloodMoon.Champions
                    
         private static void CastQ()
         {
-            var qhit = HitChance.High;
+            var qhit = HitChance.VeryHigh;
             var target = Q.GetTarget(Q.Range);
             if (target == null)
                 return;
