@@ -125,6 +125,7 @@ namespace BloodMoon.Champions
                         Q.SPredictionCast(ii, HitChance.Dash);
                     }
                 }
+        }
 
         private static void logicE()
   {
