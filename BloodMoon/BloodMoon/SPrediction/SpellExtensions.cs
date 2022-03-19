@@ -260,7 +260,7 @@ namespace SPrediction
             {
                 var pout = SPrediction.Prediction.GetPrediction(s, target);
 
-                if(pout.Hitchance >= Prediction.GetHitChance.High)
+                if(pout.GetHitChance >= Prediction.GetHitChance.High)
                 return pout.CastPosition;
             }
 
