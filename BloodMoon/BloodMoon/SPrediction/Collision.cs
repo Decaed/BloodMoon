@@ -101,7 +101,7 @@ namespace SPrediction
             var spellHitBox = ClipperWrapper.MakePaths(ClipperWrapper.DefineRectangle(from, to, width));
             if (isArc)
             {
-                spellHitBox = ClipperWrapper.MakePaths(new SPredictionMash.Geometry.Polygon(
+                spellHitBox = ClipperWrapper.MakePaths(new SPrediction.Geometry.Polygon(
                                 ClipperWrapper.DefineArc(from - new Vector2(900 / 2f, 20), to, (float)Math.PI * (to.Distance(from) / 900), 410, 200 * (to.Distance(from) / 900)),
                                 ClipperWrapper.DefineArc(from - new Vector2(900 / 2f, 20), to, (float)Math.PI * (to.Distance(from) / 900), 410, 320 * (to.Distance(from) / 900))));
 
@@ -124,7 +124,7 @@ namespace SPrediction
             var spellHitBox = ClipperWrapper.MakePaths(ClipperWrapper.DefineRectangle(from, to, width));
             if (isArc)
             {
-                spellHitBox = ClipperWrapper.MakePaths(new SPredictionMash.Geometry.Polygon(
+                spellHitBox = ClipperWrapper.MakePaths(new SPrediction.Geometry.Polygon(
                                 ClipperWrapper.DefineArc(from - new Vector2(900 / 2f, 20), to, (float)Math.PI * (to.Distance(from) / 900), 410, 200 * (to.Distance(from) / 900)),
                                 ClipperWrapper.DefineArc(from - new Vector2(900 / 2f, 20), to, (float)Math.PI * (to.Distance(from) / 900), 410, 320 * (to.Distance(from) / 900))));
             }
@@ -146,7 +146,7 @@ namespace SPrediction
             var spellHitBox = ClipperWrapper.MakePaths(ClipperWrapper.DefineRectangle(from, to, width));
             if (isArc)
             {
-                spellHitBox = ClipperWrapper.MakePaths(new SPredictionMash.Geometry.Polygon(
+                spellHitBox = ClipperWrapper.MakePaths(new SPrediction.Geometry.Polygon(
                                 ClipperWrapper.DefineArc(from - new Vector2(900 / 2f, 20), to, (float)Math.PI * (to.Distance(from) / 900), 410, 200 * (to.Distance(from) / 900)),
                                 ClipperWrapper.DefineArc(from - new Vector2(900 / 2f, 20), to, (float)Math.PI * (to.Distance(from) / 900), 410, 320 * (to.Distance(from) / 900))));
             }
@@ -191,7 +191,7 @@ namespace SPrediction
 
             if (isArc)
             {
-                spellHitBox = new SPredictionMash.Geometry.Polygon(
+                spellHitBox = new SPrediction.Geometry.Polygon(
                                 ClipperWrapper.DefineArc(from - new Vector2(900 / 2f, 20), to, (float)Math.PI * (to.Distance(from) / 900), 410, 200 * (to.Distance(from) / 900)),
                                 ClipperWrapper.DefineArc(from - new Vector2(900 / 2f, 20), to, (float)Math.PI * (to.Distance(from) / 900), 410, 320 * (to.Distance(from) / 900)));
             }
@@ -275,7 +275,7 @@ namespace SPrediction
             var spellHitBox = ClipperWrapper.MakePaths(ClipperWrapper.DefineRectangle(from, to.Extend(from, -width), width));
             if (isArc)
             {
-                spellHitBox = ClipperWrapper.MakePaths(new SPredictionMash.Geometry.Polygon(
+                spellHitBox = ClipperWrapper.MakePaths(new SPrediction.Geometry.Polygon(
                                 ClipperWrapper.DefineArc(from - new Vector2(900 / 2f, 20), to, (float)Math.PI * (to.Distance(from) / 900), 410, 200 * (to.Distance(from) / 900)),
                                 ClipperWrapper.DefineArc(from - new Vector2(900 / 2f, 20), to, (float)Math.PI * (to.Distance(from) / 900), 410, 320 * (to.Distance(from) / 900))));
             }
