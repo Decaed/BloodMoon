@@ -129,6 +129,7 @@ namespace BloodMoon.Champions
                     }
                 }
         }
+    }
         
         private static void logicE()
   {
