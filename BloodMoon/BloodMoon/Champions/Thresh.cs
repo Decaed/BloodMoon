@@ -53,6 +53,9 @@ namespace BloodMoon.Champions
 
         public static void OnGameUpdate(EventArgs args)
         {
+             if (target.HasBuff("threshQ"))
+                return;
+            {
            AutoCast();
         
         
@@ -115,9 +118,7 @@ namespace BloodMoon.Champions
         
         private static void AutoCast()
         {
-          if (target.HasBuff("threshQ"))
-                return;
-            {
+
             if (Q.IsReady())
             {
                 foreach (
@@ -129,7 +130,7 @@ namespace BloodMoon.Champions
                     }
                 }
         }
-        }
+        
         private static void logicE()
   {
       var target = E.GetTarget(E.Range);
