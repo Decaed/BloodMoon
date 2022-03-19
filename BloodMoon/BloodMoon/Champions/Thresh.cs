@@ -58,7 +58,7 @@ namespace BloodMoon.Champions
             {
            AutoCast();
         
-        
+            }      
             switch (Orbwalker.ActiveMode)
             {
                 case OrbwalkerMode.Combo:
