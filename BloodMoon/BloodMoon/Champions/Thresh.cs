@@ -122,6 +122,9 @@ namespace BloodMoon.Champions
                         ObjectManager.Get<AIHeroClient>()
                             .Where(x => x.IsValidTarget(Q.Range)))
                 {
+                if (ii.HasBuff("threshQ"))
+                return;
+                    {
                         Q.SPredictionCast(ii, HitChance.Dash);
                     }
                 }
