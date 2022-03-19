@@ -51,7 +51,7 @@ namespace SPrediction
 
             switch (s.Type)
             {
-                case .Line:
+                case SpellType.Line:
                     return LinePrediction.GetPrediction(target, s.Width, s.Delay, s.Speed, s.Range, s.Collision, target.GetWaypoints(), target.AvgMovChangeTime(), target.LastMovChangeTime(), target.AvgPathLenght(), target.LastAngleDiff(), s.From.ToVector2(), s.RangeCheckFrom.ToVector2());
                 case SpellType.Circle:
                     return CirclePrediction.GetPrediction(target, s.Width, s.Delay, s.Speed, s.Range, s.Collision, target.GetWaypoints(), target.AvgMovChangeTime(), target.LastMovChangeTime(), target.AvgPathLenght(), target.LastAngleDiff(), s.From.ToVector2(), s.RangeCheckFrom.ToVector2());
