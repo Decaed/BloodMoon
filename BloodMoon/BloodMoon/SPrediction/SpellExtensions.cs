@@ -258,9 +258,9 @@ namespace SPrediction
         {
             if(target != null)
             {
-                var pout = FSpred.Prediction.Prediction.GetPrediction(s, target);
+                var pout = Prediction.GetPrediction(s, target);
 
-                if(pout.Hitchance >= FSpred.Prediction.HitChance.High)
+                if(pout.Hitchance >= Prediction.HitChance.High)
                 return pout.CastPosition;
             }
 
