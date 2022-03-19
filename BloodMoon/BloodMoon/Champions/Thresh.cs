@@ -123,13 +123,11 @@ namespace BloodMoon.Champions
                             .Where(x => x.IsValidTarget(Q.Range)))
                 {
                         Q.SPredictionCast(ii, HitChance.Dash);
-        
-
                     }
                 }
             }
         }
-        
+}
         private static void logicE()
   {
       var target = E.GetTarget(E.Range);
