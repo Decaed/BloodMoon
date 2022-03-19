@@ -104,7 +104,7 @@ namespace BloodMoon.Champions
             if (sender.IsAlly)
                 return;
 
-            if (args.SpellName == "ZedR")
+            if (args.SpellName == "LeonaZenithBlade")
                 return;
 
             if(args.EndPosition.DistanceToPlayer() < args.StartPosition.DistanceToPlayer())
