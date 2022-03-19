@@ -24,7 +24,7 @@ using EnsoulSharp.SDK;
 
 using SharpDX;
 
-namespace SPredictionMash
+namespace SPrediction
 {
     /// <summary>
     /// Spell extensions for SPrediction
