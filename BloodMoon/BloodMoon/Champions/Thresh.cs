@@ -129,7 +129,7 @@ namespace BloodMoon.Champions
                     }
                 }
         }
-
+        }
         private static void logicE()
   {
       var target = E.GetTarget(E.Range);
