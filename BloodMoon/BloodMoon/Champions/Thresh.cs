@@ -113,30 +113,6 @@ namespace BloodMoon.Champions
 
             Q.SPredictionCast(target, qhit);
         }
-
-               
-        private static void Dashing()
-        {
-            if (Q.IsReady())
-            {
-                var target = Q.GetTarget(Q.Range);
-            
-                if (!target.IsValidTarget())
-                    return;
-                
-                if (target.HasBuff("threshQ"))
-                return;
-
-                var input = Q.GetPrediction(target, true);
-;
-
-                if (input.Hitchance >= HitChance.Dash)
-                {
-                    Q.SPredictionCast(target);
-                }
-
-            }
-        }
         
         private static void logicE()
   {
