@@ -60,7 +60,6 @@ namespace BloodMoon.Champions
             {
                 case OrbwalkerMode.Combo:
                     logicE();
-                    break;
                     CastQ();
                     break;
 
