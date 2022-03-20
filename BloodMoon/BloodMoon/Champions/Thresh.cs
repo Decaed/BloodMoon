@@ -104,7 +104,6 @@ namespace BloodMoon.Champions
             {
                 var target = Q.GetTarget(Q.Range);
                 if (Q.IsReady && target.IsValidTarget(Q.Range))
-                if ((HQ == 0 || Q.IsReady())
                 {
                     var prediction = Q.GetPrediction(target);
                     if (prediction.Hitchance >= (HitChance.High))
