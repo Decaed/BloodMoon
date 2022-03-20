@@ -107,7 +107,7 @@ namespace BloodMoon.Champions
             if (target == null)
                 return;
             
-            if (target.HasBuff("threshQ"))
+            if (target.HasBuff("ThreshQ"))
                 return;
             
             var prediction = Q.GetPrediction(target);
@@ -129,7 +129,7 @@ namespace BloodMoon.Champions
                         ObjectManager.Get<AIHeroClient>()
                             .Where(x => x.IsValidTarget(Q.Range)))
                 {
-                if (ii.HasBuff("threshQ"))
+                if (ii.HasBuff("ThreshQ"))
                 return;
                         {
                         Q.SPredictionCast(ii, HitChance.Dash);
