@@ -101,17 +101,18 @@ namespace BloodMoon.Champions
 
                    
         private static void CastQ()
-        {
-            var qhit = HitChance.VeryHigh;
-            var target = Q.GetTarget(Q.Range);
-            if (target == null)
-                return;
-
-            if (target.HasBuff("threshQ"))
-                return;
-
-            Q.SPredictionCast(target, qhit);
-        }
+            {
+                var target = Q.GetTarget(Q.Range);
+                if (Q.IsReady && target.IsValidTarget(Q.Range))
+                if ((HQ == 0 || Q.IsReady())
+                {
+                    var prediction = Q.GetPrediction(target);
+                    if (prediction.Hitchance >= (HitChance.High))
+                    {
+                        Q.Cast(prediction.CastPosition);
+                    }
+                }
+            }
         
         private static void AutoCast()
         {
