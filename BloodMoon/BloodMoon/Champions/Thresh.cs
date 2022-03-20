@@ -131,7 +131,7 @@ namespace BloodMoon.Champions
             
             var prediction = Q.GetPrediction(target);
             
-            if (prediction.Hitchance == (HitChance.Dash))
+            if (prediction.Hitchance == (HitChance.Dashing))
                     {
                         Q.Cast(prediction.CastPosition);
                     }
