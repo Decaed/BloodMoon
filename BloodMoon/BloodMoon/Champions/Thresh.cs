@@ -116,7 +116,7 @@ namespace BloodMoon.Champions
                     {
                         Q.Cast(prediction.CastPosition);
                     }
-                }
+                
         
         private static void AutoCast()
         {
