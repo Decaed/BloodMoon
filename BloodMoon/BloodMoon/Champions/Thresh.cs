@@ -121,22 +121,21 @@ namespace BloodMoon.Champions
         
         private static void AutoCast()
         {
-
-            if (Q.IsReady())
-            {
-                foreach (
-                    var ii in
-                        ObjectManager.Get<AIHeroClient>()
-                            .Where(x => x.IsValidTarget(Q.Range)))
-                {
-                if (ii.HasBuff("ThreshQ"))
+            var target = Q.GetTarget(Q.Range);
+            
+            if (target == null)
                 return;
-                        {
-                        Q.SPredictionCast(ii, HitChance.Dash);
-                        }
+            
+            if (target.HasBuff("ThreshQ"))
+                return;
+            
+            var prediction = Q.GetPrediction(target);
+            
+            if (prediction.Hitchance == (HitChance.Dash))
+                    {
+                        Q.Cast(prediction.CastPosition);
                     }
-                }
-            }
+        }
         
         
         private static void logicE()
