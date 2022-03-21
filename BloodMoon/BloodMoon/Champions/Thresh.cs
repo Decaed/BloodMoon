@@ -109,9 +109,9 @@ namespace BloodMoon.Champions
             if (args.SpellName != "RocketJump")
                 return;
 
-            if(args.EndPosition.DistanceToPlayer() < args.StartPosition.DistanceToPlayer())
+            if(args.StartPosition.DistanceToPlayer() > args.EndPosition.DistanceToPlayer())
             {
-                if(args.EndPosition.DistanceToPlayer() <= 500 && sender.IsValidTarget(800))
+                if(args.StartPosition.DistanceToPlayer() <= 500 && sender.IsValidTarget(500))
                 {
                     if (E.Cast(sender) == CastStates.SuccessfullyCasted)
                         return;
