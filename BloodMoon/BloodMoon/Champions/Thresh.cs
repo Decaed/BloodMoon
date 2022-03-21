@@ -50,7 +50,7 @@ namespace BloodMoon.Champions
             Config.Attach();
             GameEvent.OnGameTick += OnGameUpdate;
             //AntiGapcloser.OnGapcloser += Gapcloser_OnGapcloser;
-            BaseClient.OnProcessSpellCast += AIBaseClient_OnProcessSpellCast;
+            AIBaseClient.OnProcessSpellCast += AIBaseClient_OnProcessSpellCast;
             Drawing.OnDraw += OnDraw;
         } 
 
