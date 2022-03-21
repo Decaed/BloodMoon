@@ -118,10 +118,14 @@ namespace BloodMoon.Champions
                 }
                 else
                 {
-                    return;
+             if(args.SpellName == "RocketJump") && args.EndPosition.DistanceToPlayer() >= 500 && sender.IsValidTarget(500))
                 }
+              if (E.Cast(sender) == CastStates.SuccessfullyCasted)
+              return;
             }
         }
+    }
+}
                    
         private static void CastQ()
         {
