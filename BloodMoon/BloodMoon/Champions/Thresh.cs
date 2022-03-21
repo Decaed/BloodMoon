@@ -49,7 +49,8 @@ namespace BloodMoon.Champions
 
             Config.Attach();
             GameEvent.OnGameTick += OnGameUpdate;
-            AntiGapcloser.OnGapcloser += Gapcloser_OnGapcloser;
+            //AntiGapcloser.OnGapcloser += Gapcloser_OnGapcloser;
+            BaseClient.OnProcessSpellCast += AIBaseClient_OnProcessSpellCast;
             Drawing.OnDraw += OnDraw;
         } 
 
@@ -101,17 +102,14 @@ namespace BloodMoon.Champions
             }
         }
         
-        private static void Gapcloser_OnGapcloser(AIHeroClient sender, AntiGapcloser.GapcloserArgs args)
+        private static void AIBaseClient_OnProcessSpellCast(AIBaseClient sender, AIBaseClientProcessSpellCastEventArgs args)
         {
-            if (sender.IsAlly)
-                return;
-
-            if(args.StartPosition.DistanceToPlayer() > args.EndPosition.DistanceToPlayer())
+            if (sender.IsMe)
             {
-                if(args.StartPosition.DistanceToPlayer() <= 500 && sender.IsValidTarget(500))
+                if (args.Slot == SpellSlot.E)
                 {
-                    if (E.Cast(sender) == CastStates.SuccessfullyCasted)
-                        return;
+                    lastE = Variables.GameTimeTickCount;
+                    CheckImDashing = true;
                 }
             }
         }
