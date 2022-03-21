@@ -104,16 +104,25 @@ namespace BloodMoon.Champions
         
         private static void AIBaseClient_OnProcessSpellCast(AIBaseClient sender, AIBaseClientProcessSpellCastEventArgs args)
         {
-            if (sender.IsMe)
+            if (sender.IsAlly)
+                return;
+
+            if (args.SpellName == "RocketJump")
+                return;
+
+            if(args.EndPosition.DistanceToPlayer() > args.StartPosition.DistanceToPlayer())
             {
-                if (args.Slot == SpellSlot.E)
+                if(args.SpellName == "RocketJump" && args.EndPosition.DistanceToPlayer() => 500 && sender.IsValidTarget(500))
                 {
-                    lastE = Variables.GameTimeTickCount;
-                    CheckImDashing = true;
+                    if (E.Cast(sender) == CastStates.SuccessfullyCasted)
+                        return;
+                }
+                else
+                {
+                    return;
                 }
             }
         }
-
                    
         private static void CastQ()
         {
