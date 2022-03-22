@@ -170,7 +170,7 @@ namespace BloodMoon.Champions
         
         private static void logicE()
   {
-      var target = TargetSelectorMode(E.Range);
+      var target = TargetSelector.Mode(E.Range);
       var Player = GameObjects.Player;
 
       if (E.IsReady() && ObjectManager.Player.Distance(target.Position) < 500)
