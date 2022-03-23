@@ -131,7 +131,7 @@ namespace BloodMoon.Champions
             if (target == null)
                 return;
             
-            if (target.HasBuff("ThreshQ"))
+            if (target.HasBuff("threshq"))
                 return;
             
             if (ObjectManager.Player.Distance(target.Position) < 500) 
@@ -156,7 +156,7 @@ namespace BloodMoon.Champions
             if (ObjectManager.Player.Distance(target.Position) < 500) 
                 return;
             
-            if (target.HasBuff("ThreshQ"))
+            if (target.HasBuff("threshq"))
                 return;
             
             var prediction = Q.GetPrediction(target);
