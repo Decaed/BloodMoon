@@ -112,7 +112,7 @@ namespace BloodMoon.Champions
 
             if(args.EndPosition.DistanceToPlayer() < args.StartPosition.DistanceToPlayer())
             {
-                if(args.EndPosition.DistanceToPlayer() <= 500 && sender.IsValidTarget(800))
+                if(args.EndPosition.DistanceToPlayer() <= 500 && sender.IsValidTarget(1000))
                 {
                     if (E.Cast(sender) == CastStates.SuccessfullyCasted)
                         return;
