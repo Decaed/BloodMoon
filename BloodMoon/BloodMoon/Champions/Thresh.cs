@@ -25,7 +25,7 @@ namespace BloodMoon.Champions
             {
                 return;
             }
-            Q = new Spell(SpellSlot.Q, 1100);
+            Q = new Spell(SpellSlot.Q, 1050);
             E = new Spell(SpellSlot.E, 500);
             
             Q.SetSkillshot(0.5f, 70f, 1900f, true, SpellType.Line);
@@ -34,7 +34,7 @@ namespace BloodMoon.Champions
             Config = new Menu("Thresh", "BloodMoon", true);
         
             var menuD = new Menu("dsettings", "Drawings");
-            menuD.Add(new MenuBool("drawQ", "1075  (Red)", true));
+            menuD.Add(new MenuBool("drawQ", "10050 Red)", true));
             menuD.Add(new MenuBool("drawW", "900 (Green)", true));
             
             var pred = new Menu("pred", "Spred Config");
