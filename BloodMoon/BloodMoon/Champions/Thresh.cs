@@ -152,9 +152,7 @@ namespace BloodMoon.Champions
             
             if (target == null)
                 return;
-            
-            if (ObjectManager.Player.Distance(target.Position) < 500) 
-                return;
+
             
             if (target.HasBuff("threshq"))
                 return;
