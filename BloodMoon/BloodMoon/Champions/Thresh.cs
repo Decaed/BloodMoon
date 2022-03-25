@@ -126,7 +126,7 @@ namespace BloodMoon.Champions
                    
         private static void CastQ()
         {
-            var target = Q.TargetSelector(Q.Range);
+            var target = Q.GetTarget(Q.Range);
             
             if (target == null)
                 return;
