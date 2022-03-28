@@ -28,8 +28,8 @@ namespace BloodMoon.Champions
             Q = new Spell(SpellSlot.Q, 1050);
             E = new Spell(SpellSlot.E, 500);
             
-            Q.SetSkillshot(0.5, 70, 1900, true, SpellType.Line);
-            E.SetSkillshot(0.125, 110, 2000, false, SpellType.Line);
+            Q.SetSkillshot(0.5f, 70f, 1900, true, SpellType.Line);
+            E.SetSkillshot(0.125f, 110f, 2000, false, SpellType.Line);
                     
             Config = new Menu("Thresh", "BloodMoon", true);
         
