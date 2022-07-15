@@ -35,7 +35,7 @@ namespace BloodMoon {
                     ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                     stringg = client.DownloadString(uri);
                 }
-                string versionas = "1.0.4\n";
+                string versionas = "2.0\n";
                 if (versionas != stringg) {
                     Game.Print("<font color='#ff0000'> [BloodMoon]: </font> <font color='#ffe6ff' size='25'></font>");
                 }
