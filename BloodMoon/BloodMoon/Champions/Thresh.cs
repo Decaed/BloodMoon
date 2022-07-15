@@ -154,7 +154,7 @@ namespace BloodMoon.Champions
                 return;
 
             
-            if (target.HasBuff("threshq"))
+            if (target.HasBuff("ThreshQ"))
                 return;
             
             var prediction = Q.GetPrediction(target);
