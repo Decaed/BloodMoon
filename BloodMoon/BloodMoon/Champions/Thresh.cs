@@ -7,7 +7,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SPrediction;
 
 
 namespace BloodMoon.Champions
@@ -36,8 +35,7 @@ namespace BloodMoon.Champions
             var menuD = new Menu("dsettings", "Drawings");
             menuD.Add(new MenuBool("drawQ", "10050 Red)", true));
             menuD.Add(new MenuBool("drawW", "900 (Green)", true));
-            
-            var pred = new Menu("pred", "Spred Config");
+      
 
             var menuRR = new Menu("semiR", "Semi Skills");
             menuRR.Add(new MenuKeyBind("farm", "Lane Clear spells", Keys.Select, KeyBindType.Toggle));
