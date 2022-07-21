@@ -42,9 +42,8 @@ namespace BloodMoon.Champions
             
             Config.Add(menuD);
             Config.Add(menuRR);
-            SPrediction.Prediction.Initialize(pred);
-            
-
+ 
+           
             Config.Attach();
             GameEvent.OnGameTick += OnGameUpdate;
             AntiGapcloser.OnGapcloser += Gapcloser_OnGapcloser;
