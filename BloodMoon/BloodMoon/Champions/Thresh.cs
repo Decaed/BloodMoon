@@ -156,6 +156,9 @@ namespace BloodMoon.Champions
             
             var prediction = Q.GetPrediction(target);
             
+            if (ObjectManager.Player.Distance(target.Position) < 500) 
+                return;
+            
             if (prediction.Hitchance == (HitChance.Dash))
                     {
                         Q.Cast(prediction.CastPosition);
