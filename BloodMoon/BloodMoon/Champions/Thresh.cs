@@ -73,31 +73,7 @@ namespace BloodMoon.Champions
 
             }
         }
-        
-        private static void OnDraw(EventArgs args)
-        {
-            var position = GameObjects.Player.Position;
-
-            if (Config["dsettings"].GetValue<MenuBool>("drawQ").Enabled)
-            {
-                Render.Circle.DrawCircle(position, Q.Range, System.Drawing.Color.Red);
-            }
-
-            if (Config["dsettings"].GetValue<MenuBool>("drawE").Enabled)
-            {
-                Render.Circle.DrawCircle(position, E.Range, System.Drawing.Color.Blue);
-            }
-
-            if (Config["dsettings"].GetValue<MenuBool>("drawW").Enabled)
-            {
-                Render.Circle.DrawCircle(position, W.Range, System.Drawing.Color.Green);
-            }
-
-            if (Config["dsettings"].GetValue<MenuBool>("drawR").Enabled)
-            {
-                Render.Circle.DrawCircle(position, R.Range, System.Drawing.Color.White);
-            }
-        }
+     
         
         private static void Gapcloser_OnGapcloser(AIHeroClient sender, AntiGapcloser.GapcloserArgs args)
         {
