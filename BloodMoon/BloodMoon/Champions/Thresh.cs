@@ -47,8 +47,7 @@ namespace BloodMoon.Champions
             Config.Attach();
             GameEvent.OnGameTick += OnGameUpdate;
             AntiGapcloser.OnGapcloser += Gapcloser_OnGapcloser;
-      
-            Drawing.OnDraw += OnDraw;
+   
         } 
 
         public static void OnGameUpdate(EventArgs args)
