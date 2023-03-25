@@ -98,24 +98,20 @@ namespace BloodMoon.Champions
                    
         private static void CastQ()
         {
-            var target = Q.GetTarget(Q.Range);
-            
-            if (target == null)
-                return;
-            
-            if (target.HasBuff("threshq"))
-                return;
-            
-            if (ObjectManager.Player.Distance(target.Position) < 500) 
-                return;
-            
-            var prediction = Q.GetPrediction(target);
-            
-            if (prediction.Hitchance >= (HitChance.High))
-                    {
-                        Q.Cast(prediction.CastPosition);
-                    }
+        var target = Q.GetTarget(Q.Range);
+        if (target == null || target.HasBuff("threshq"))
+        return;
+
+        var distance = ObjectManager.Player.Distance(target.Position);
+        if (distance < 500)
+        return;
+
+        var prediction = Q.GetPrediction(target);
+        if (prediction.Hitchance >= HitChance.High)
+        {
+        Q.Cast(prediction.CastPosition);
         }
+    }
                 
         
         private static void AutoCast()
